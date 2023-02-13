@@ -17,10 +17,11 @@ TARGET_DIR="/home/mastodon"
 DATE=$(date +%Y%m%dT%H%M)
 
 # save 1 level of backups
+sudo chmod 755 "${TARGET_DIR}"
+sudo chmod 755 "${TARGET_DIR}/live"
 sudo rm -rfd "${TARGET_DIR}/"backup.*
 sudo mkdir "${TARGET_DIR}/backup.${DATE}"
-if [ -d "${TARGET_DIR}/live" ] 
-then
+if [[ -d "${TARGET_DIR}/live" ]] ; then
   sudo mv "${TARGET_DIR}/live" "${TARGET_DIR}/backup.${DATE}/live"
 fi
 
