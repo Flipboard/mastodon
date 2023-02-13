@@ -18,10 +18,10 @@ DATE=$(date +%Y%m%dT%H%M)
 
 # save 1 level of backups
 sudo chmod -f 755 "${TARGET_DIR}"
-sudo chmod -f 755 "${TARGET_DIR}/live"
 sudo rm -rfd "${TARGET_DIR}/"backup.*
 sudo mkdir "${TARGET_DIR}/backup.${DATE}"
 if [[ -d "${TARGET_DIR}/live" ]] ; then
+  sudo chmod -f 755 "${TARGET_DIR}/live"
   sudo mv "${TARGET_DIR}/live" "${TARGET_DIR}/backup.${DATE}/live"
 fi
 
