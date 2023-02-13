@@ -10,7 +10,9 @@ if [[ `whoami` != 'ubuntu' ]]; then
     exit 1
 fi
 
-SRC_DIR="/ebsa/mastodon/current"
+_HERE=$(cd $(dirname "$0"); pwd)
+SRC_DIR="${_HERE}"
+#SRC_DIR="/ebsa/mastodon/current"
 TARGET_DIR="/home/mastodon"
 DATE=$(date +%Y%m%dT%H%M)
 
