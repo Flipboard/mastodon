@@ -36,7 +36,7 @@ sudo cp -r "${SRC_DIR}"/live "${TARGET_DIR}"
 sudo chown -R mastodon:mastodon /home/mastodon
 
 # build the code
-sudo -i -u mastodon bash --login -c 'cd live; export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH; export RAILS_ENV=production; bundle config deployment "true"; bundle config without "development test"; bundle install; yarn install --pure-lockfile'
+#sudo -i -u mastodon bash --login -c 'cd live; export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH; export RAILS_ENV=production; bundle config deployment "true"; bundle config without "development test"; bundle install; yarn install --pure-lockfile'
 
 # tar and upload
 sudo -i -u mastodon bash --login -c "cp live/updater_post_install.sh updater_post_install.sh; tar cvf ${GIT_COMMIT}.tar live updater_post_install.sh; gzip ${GIT_COMMIT}.tar; aws s3 cp ${GIT_COMMIT}.tar.gz s3://flipboard.prod.releases/mastodon/${GIT_COMMIT}.tar.gz"
