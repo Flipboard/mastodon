@@ -17,7 +17,10 @@ DATE=$(date +%Y%m%dT%H%M)
 # save 1 level of backups
 sudo rm -rfd "${TARGET_DIR}/"backup.*
 sudo mkdir "${TARGET_DIR}/backup.${DATE}"
-sudo mv "${TARGET_DIR}/live" "${TARGET_DIR}/backup.${DATE}/live"
+if [ -d "${TARGET_DIR}/live" ] 
+then
+  sudo mv "${TARGET_DIR}/live" "${TARGET_DIR}/backup.${DATE}/live"
+fi
 
 # copy over current data
 sudo cp -r "${SRC_DIR}"/live "${TARGET_DIR}"
