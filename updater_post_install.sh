@@ -28,6 +28,9 @@ fi
 # copy over current data
 sudo cp -r "${SRC_DIR}"/live "${TARGET_DIR}"
 
+# get pool for s3 configs
+mypool="$(grep ec2.pool /ebsa/config/services.config | cut -d '=' -f 2 | head -1)"
+
 # copy over important configs
 local_domain="$(grep mastodon.local_domain /ebsa/config/services.config | cut -d '=' -f 2 | head -1)"
 single_user_mode="$(grep mastodon.single_user_mode /ebsa/config/services.config | cut -d '=' -f 2 | head -1)"
@@ -86,6 +89,18 @@ echo "ES_USER=${es_user}" >> /tmp/env.production
 echo "ES_PASS=${es_pass}" >> /tmp/env.production
 echo "ELASTIC_PASSWORD=${elastic_password}" >> /tmp/env.production
 echo "ELASTIC_SECURITY=${elastic_security}" >> /tmp/env.production
+
+echo "S3_ENABLED=true" >> /tmp/env.production
+echo "S3_REGION=us-east-1" >> /tmp/env.production
+echo "S3_PROTOCOL=https" >> /tmp/env.production
+echo "S3_HOSTNAME=s3-us-east-1.amazonaws.com" >> /tmp/env.production
+if [[ "${mypool}" == "production" ]] ; then
+  S3_BUCKET=m-cdn.flipboard.social
+  S3_ALIAS_HOST=m-cdn.flipboard.social
+else
+  S3_BUCKET=social-cdn.flipboard.com
+  S3_ALIAS_HOST=social-cdn.flipboard.com
+fi
 
 sudo mv "/tmp/env.production" "${TARGET_DIR}/live/.env.production"
 
