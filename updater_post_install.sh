@@ -95,11 +95,11 @@ echo "S3_REGION=us-east-1" >> /tmp/env.production
 echo "S3_PROTOCOL=https" >> /tmp/env.production
 echo "S3_HOSTNAME=s3-us-east-1.amazonaws.com" >> /tmp/env.production
 if [[ "${mypool}" == "production" ]] ; then
-  S3_BUCKET=m-cdn.flipboard.social
-  S3_ALIAS_HOST=m-cdn.flipboard.social
+  echo "S3_BUCKET=m-cdn.flipboard.social" >> /tmp/env.production
+  echo "S3_ALIAS_HOST=m-cdn.flipboard.social" >> /tmp/env.production
 else
-  S3_BUCKET=social-cdn.flipboard.com
-  S3_ALIAS_HOST=social-cdn.flipboard.com
+  echo "S3_BUCKET=social-cdn.flipboard.com" >> /tmp/env.production
+  echo "S3_ALIAS_HOST=social-cdn.flipboard.com" >> /tmp/env.production
 fi
 
 sudo mv "/tmp/env.production" "${TARGET_DIR}/live/.env.production"
