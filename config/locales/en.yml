@@ -70,10 +70,12 @@ en:
       enable_sign_in_token_auth: Enable e-mail token authentication
       enabled: Enabled
       enabled_msg: Successfully unfroze %{username}'s account
+      flipboard_username: Flipboard username
       followers: Followers
       follows: Follows
       header: Header
       inbox_url: Inbox URL
+      invite_request_flipboard_username: Flipboard username
       invite_request_text: Reasons for joining
       invited_by: Invited by
       ip: IP

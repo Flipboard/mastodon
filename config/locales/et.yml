@@ -70,10 +70,12 @@ et:
       enable_sign_in_token_auth: Luba e-posti võtmetega autentimine
       enabled: Lubatud
       enabled_msg: Kasutaja %{username} konto taastatud
+      flipboard_username: Flipboard kasutajanimi
       followers: Jälgijad
       follows: Jälgib
       header: Päis
       inbox_url: Sisendkausta URL
+      invite_request_flipboard_username: Flipboard kasutajanimi
       invite_request_text: Põhjendused liitumiseks
       invited_by: Kutsuja
       ip: IP

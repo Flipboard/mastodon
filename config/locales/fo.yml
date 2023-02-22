@@ -70,10 +70,12 @@ fo:
       enable_sign_in_token_auth: Ger váttan við teldupostateknum virkna
       enabled: Í gildi
       enabled_msg: Tiðnaði kontuna hjá %{username}
+      flipboard_username: Flipboard brúkaranavn
       followers: Fylgjarar
       follows: Fylgir
       header: Høvd
       inbox_url: Innbakka-URL'ur
+      invite_request_flipboard_username: Flipboard brúkaranavn
       invite_request_text: Tilmeldingarorsakir
       invited_by: Bjóðað av
       ip: IP

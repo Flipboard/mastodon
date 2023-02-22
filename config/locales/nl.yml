@@ -70,10 +70,12 @@ nl:
       enable_sign_in_token_auth: Verificatie met een toegangscode via e-mail inschakelen
       enabled: Ingeschakeld
       enabled_msg: Het ontdooien van het account van %{username} is geslaagd
+      flipboard_username: Flipboard gebruikersnaam
       followers: Volgers
       follows: Volgt
       header: Omslagfoto
       inbox_url: Inbox-URL
+      invite_request_flipboard_username: Flipboard gebruikersnaam
       invite_request_text: Redenen om te registreren
       invited_by: Uitgenodigd door
       ip: IP

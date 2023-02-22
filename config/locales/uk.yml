@@ -74,10 +74,12 @@ uk:
       enable_sign_in_token_auth: Увімкнути автентифікацію за допомогою е-пошти
       enabled: Увімкнено
       enabled_msg: Обліковий запис %{username} успішно розморожено
+      flipboard_username: Flipboard iм'я користувача
       followers: Підписники
       follows: Підписки
       header: Заголовок
       inbox_url: URL вхідних повідомлень
+      invite_request_flipboard_username: Flipboard iм'я користувача
       invite_request_text: Причини приєднатися
       invited_by: Запросив
       ip: IP

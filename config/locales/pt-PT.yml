@@ -70,10 +70,12 @@ pt-PT:
       enable_sign_in_token_auth: Ativar token de autenticação por e-mail
       enabled: Ativado
       enabled_msg: Descongelou a conta %{username}
+      flipboard_username: Flipboard nome de utilizador
       followers: Seguidores
       follows: A seguir
       header: Cabeçalho
       inbox_url: URL da caixa de entrada
+      invite_request_flipboard_username: Flipboard nome de utilizador
       invite_request_text: Razões para se juntar a nós
       invited_by: Convidado(a) por
       ip: IP

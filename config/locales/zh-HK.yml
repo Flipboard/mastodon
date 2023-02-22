@@ -68,10 +68,12 @@ zh-HK:
       enable_sign_in_token_auth: 啟用 e-mail 驗證碼
       enabled: 已啟用
       enabled_msg: 成功解除 %{username} 帳號的凍結
+      flipboard_username: Flipboard 使用者名稱
       followers: 關注者
       follows: 正在關注
       header: 個人資料頁頂圖片
       inbox_url: 收件箱（Inbox）URL
+      invite_request_flipboard_username: Flipboard 使用者名稱
       invite_request_text: 加入的原因
       invited_by: 邀請者
       ip: IP 位址

@@ -70,10 +70,12 @@ fy:
       enable_sign_in_token_auth: Ferifikaasje mei in tagongskoade fia e-mailberjocht ynskeakelje
       enabled: Ynskeakele
       enabled_msg: It ûntteie fan de account fan %{username} is slagge
+      flipboard_username: Flipboard brûkersnamme
       followers: Folgers
       follows: Folgjend
       header: Omslachfoto
       inbox_url: Ynboks-URL
+      invite_request_flipboard_username: Flipboard brûkersnamme
       invite_request_text: Redenen om te registrearjen
       invited_by: Utnûge troch
       ip: IP
