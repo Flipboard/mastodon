@@ -97,6 +97,7 @@ const keyMap = {
   goToHome: 'g h',
   goToNotifications: 'g n',
   goToLocal: 'g l',
+  goToFederated: 'g t',
   goToDirect: 'g d',
   goToStart: 'g s',
   goToFavourites: 'g f',
@@ -504,6 +505,10 @@ class UI extends React.PureComponent {
     this.context.router.history.push('/public/local');
   };
 
+  handleHotkeyGoToFederated = () => {
+    this.context.router.history.push('/public');
+  };
+
   handleHotkeyGoToDirect = () => {
     this.context.router.history.push('/conversations');
   };
@@ -551,6 +556,7 @@ class UI extends React.PureComponent {
       goToHome: this.handleHotkeyGoToHome,
       goToNotifications: this.handleHotkeyGoToNotifications,
       goToLocal: this.handleHotkeyGoToLocal,
+      goToFederated: this.handleHotkeyGoToFederated,
       goToDirect: this.handleHotkeyGoToDirect,
       goToStart: this.handleHotkeyGoToStart,
       goToFavourites: this.handleHotkeyGoToFavourites,

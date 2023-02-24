@@ -17,6 +17,7 @@ const messages = defineMessages({
   notifications: { id: 'tabs_bar.notifications', defaultMessage: 'Notifications' },
   explore: { id: 'explore.title', defaultMessage: 'Explore' },
   local: { id: 'tabs_bar.local_timeline', defaultMessage: 'Local' },
+  federated: { id: 'tabs_bar.federated_timeline', defaultMessage: 'Federated' },
   direct: { id: 'navigation_bar.direct', defaultMessage: 'Direct messages' },
   favourites: { id: 'navigation_bar.favourites', defaultMessage: 'Favourites' },
   bookmarks: { id: 'navigation_bar.bookmarks', defaultMessage: 'Bookmarks' },
@@ -67,6 +68,7 @@ class NavigationPanel extends React.Component {
         {(signedIn || timelinePreview) && (
           <>
             <ColumnLink transparent to='/public/local' icon='users' text={intl.formatMessage(messages.local)} />
+            <ColumnLink transparent exact to='/public' icon='globe' text={intl.formatMessage(messages.federated)} />
           </>
         )}
 
