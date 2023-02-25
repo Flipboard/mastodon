@@ -354,7 +354,6 @@ defaults: &defaults
     - DiarideGirona
     - FUJIFILMUSA
     - ShootingUK
-    - scottmonty
     - YahooSports
     - landroverusa
     - MoscowTimes
@@ -653,7 +652,6 @@ defaults: &defaults
     - 21CTO
     - fengcardinal
     - Daisygolfshub
-    - msecchi
     - ElMotor
     - wenwanmiapp
     - gh_47008251a48e
@@ -788,7 +786,6 @@ defaults: &defaults
     - WomanMagazine
     - BASE2022
     - ThisIsFutbol
-    - flakphoto
     - JOEcouk
     - PlacesTravel
     - CheddarTV
@@ -1031,7 +1028,6 @@ defaults: &defaults
     - Telemundo52
     - venturebeat
     - caranddriverES
-    - JanetteSpeyer
     - Adrenalinebr
     - aimeeallison
     - GalerieMagazine
@@ -1966,7 +1962,6 @@ defaults: &defaults
     - mexdesconocido
     - Medisite
     - Webnews_it
-    - jasonburn
     - iheartradio
     - SonjaPears
     - 7lti3pl
@@ -2145,7 +2140,6 @@ defaults: &defaults
     - 90min_ID
     - OvertureGlobal
     - Sirjhswin
-    - Jentrification
     - WisconsinWatch
     - Businessweek
     - DOC5jns
@@ -3427,7 +3421,6 @@ defaults: &defaults
     - leitech
     - PCMag
     - atstar1
-    - imdavidpierce
     - LANCENET
     - ErinBrockovich
     - quotidianonet
@@ -3518,7 +3511,6 @@ defaults: &defaults
     - Recombu
     - TheRealNews
     - LObs2019
-    - salvomic
     - YummyTravel
     - NUVOMagazine
     - AltPress
@@ -3966,7 +3958,6 @@ defaults: &defaults
     - Ausgeo
     - thekenyeung
     - EffortlessHR
-    - iSocialFanz
     - lofficieltr
     - CNALive
     - UOL
@@ -3993,7 +3984,6 @@ defaults: &defaults
     - Hipersnica
     - PPuentes
     - thenextweb
-    - mhaustria
     - chantatum
     - MunteanuEduard
     - DanBHarris
@@ -4402,7 +4392,6 @@ defaults: &defaults
     - PioneerPress
     - ElleTurkiye
     - Istanbullife
-    - exergamelab
     - InsideEVs
     - ReadRate
     - Business
@@ -5232,7 +5221,6 @@ defaults: &defaults
     - MadameFigaro
     - KQED2018
     - Byteside
-    - BethBlecherman
     - TopTenRevie2019
     - TheTyee2019
     - dlfkultur
