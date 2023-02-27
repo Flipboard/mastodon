@@ -1008,7 +1008,7 @@ en:
       preamble_html: Sign in with your <strong>%{domain}</strong> credentials. If your account is hosted on a different server, you will not be able to log in here.
       title: Sign in to %{domain}
     sign_up:
-      preamble: With an account on this Mastodon server, you'll be able to follow any other person on the network, regardless of where their account is hosted.
+      preamble: Apply to join this Flipboard community on Mastodon. Once approved you will be able to connect with others, regardless of where their account is hosted.
       title: Let's get you set up on %{domain}.
     status:
       account_status: Account status
