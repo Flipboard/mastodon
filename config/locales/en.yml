@@ -1667,13 +1667,13 @@ en:
     welcome:
       edit_profile_action: Setup profile
       edit_profile_step: You can customize your profile by uploading a profile picture, changing your display name and more. You can opt-in to review new followers before they’re allowed to follow you.
-      explanation: Here are some tips to get you started
+      explanation: You’ve been approved to join %{domain}. Here are some tips to get you started:
       final_action: Start posting
-      final_step: 'Start posting! Even without followers, your public posts may be seen by others, for example on the local timeline or in hashtags. You may want to introduce yourself on the #introductions hashtag.'
+      final_step: 'Start posting! Even without followers, your public posts may be seen by others, for example on the local timeline or in hashtags. You may want to introduce yourself on the #introductions hashtag, and share your favorite Flipboard Magazine when you do!'
       full_handle: Your full handle
-      full_handle_hint: This is what you would tell your friends so they can message or follow you from another server.
+      full_handle_hint: You can share your new handle with friends so they can message or follow you. It’s also how people can find you when they search on Mastodon.
       subject: Welcome to Mastodon
-      title: Welcome aboard, %{name}!
+      title: Welcome %{name}!
   users:
     follow_limit_reached: You cannot follow more than %{limit} people
     invalid_otp_token: Invalid two-factor code
