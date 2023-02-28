@@ -1667,7 +1667,7 @@ en:
     welcome:
       edit_profile_action: Setup profile
       edit_profile_step: You can customize your profile by uploading a profile picture, changing your display name and more. You can opt-in to review new followers before they’re allowed to follow you.
-      explanation: You’ve been approved to join %{domain}. Here are some tips to get you started
+      explanation: You’ve been approved to join flipboard.social. Here are some tips to get you started
       final_action: Start posting
       final_step: 'Start posting! Even without followers, your public posts may be seen by others, for example on the local timeline or in hashtags. You may want to introduce yourself on the #introductions hashtag, and share your favorite Flipboard Magazine when you do!'
       full_handle: Your full handle
