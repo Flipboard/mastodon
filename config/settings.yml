@@ -615,8 +615,8 @@ defaults: &defaults
     - LifelineDe
     - NicolasGary
     - ElaMahler
-    - feedthemalik
     - WWD
+    - hackernews
     - LeDevoir
     - biespana
     - TheDoctorsTV
