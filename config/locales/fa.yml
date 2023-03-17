@@ -70,10 +70,12 @@ fa:
       enable_sign_in_token_auth: به کار انداختن تأیید هویت ژتون رایانامه‌ای
       enabled: به کار افتاده
       enabled_msg: حساب %{username} با موفقیت به کار انداخته شد
+      flipboard_username: Flipboard ﻥﺎﻣ کﺍﺮﺑﺭی
       followers: پیگیران
       follows: پی می‌گیرد
       header: تصویر زمینه
       inbox_url: نشانی صندوق ورودی
+      invite_request_flipboard_username: Flipboard ﻥﺎﻣ کﺍﺮﺑﺭی
       invite_request_text: دلایل‌تان برای پیوستن
       invited_by: دعوت‌شده از طرف
       ip: آی‌پی

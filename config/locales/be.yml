@@ -74,10 +74,12 @@ be:
       enable_sign_in_token_auth: Уключыць аўтэнтыфікацыю па e-mail токену
       enabled: Уключана
       enabled_msg: Уліковы запіс %{username} размарожаны
+      flipboard_username: Flipboard iмя карыстальніка
       followers: Падпісчыкі
       follows: Падпіскі
       header: Загаловак
       inbox_url: URL уваходных
+      invite_request_flipboard_username: Flipboard iмя карыстальніка
       invite_request_text: Прычына далучэння
       invited_by: Запрошаны
       ip: IP

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_06_114142) do
+ActiveRecord::Schema.define(version: 2023_02_22_112209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -1011,6 +1011,8 @@ ActiveRecord::Schema.define(version: 2022_12_06_114142) do
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "flipboard_username"
+    t.index ["flipboard_username"], name: "index_user_invite_requests_on_flipboard_username"
     t.index ["user_id"], name: "index_user_invite_requests_on_user_id"
   end
 

@@ -55,6 +55,7 @@ bn:
       email_status: ইমেইলের অবস্থা
       enable: চালু করুন
       enabled: চালু করুন
+      flipboard_username: Flipboard ব্যবহারকারীর নাম
       followers: অনুসরকারীরা
       follows: অনুসরণ করে
       header: শিরোলেখা
