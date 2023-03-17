@@ -15,7 +15,7 @@ if [[ $# -eq 0 ]] ; then
     exit 1
 fi
 
-SRC_DIR="/mnt/jenkins-mastodon/workspace/mastodon"
+SRC_DIR="/mnt/jenkins-mastodon/workspace/${2}"
 TARGET_DIR="/home/mastodon"
 DATE=$(date +%Y%m%dT%H%M)
 GIT_COMMIT="$1"
