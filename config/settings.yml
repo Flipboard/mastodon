@@ -4076,7 +4076,6 @@ defaults: &defaults
     - WCVB2020
     - WMUR
     - LeTelegramme
-    - evamorell
     - Worldatlascom
     - EatMoreArt
     - SFRActus
