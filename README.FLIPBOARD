@@ -1,2 +1,8 @@
 - added updater_post_install.sh script
 - added jenkins build script
+
+To get tags from upstream
+$ git fetch --tags upstream
+$ git push --tags
+
+Use github to sync repo into master
