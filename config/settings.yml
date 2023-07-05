@@ -1114,7 +1114,6 @@ defaults: &defaults
     - kalnima
     - oldskullnet
     - markpain
-    - CamilleStyles
     - 19thnews
     - WSBTV
     - CADENA100
@@ -2520,7 +2519,6 @@ defaults: &defaults
     - WYFF2020
     - WomensHealthSp
     - bifrance
-    - FeatureShoot
     - GirlsWhoCode
     - Ballislife2018
     - MosaicsLab
@@ -3604,7 +3602,6 @@ defaults: &defaults
     - techmonitorai
     - desired_de
     - EnlaceLatinoNC
-    - AnthropoceneMag
     - EdgyLabs
     - soccerly
     - BusinessInsider
