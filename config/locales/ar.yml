@@ -78,10 +78,12 @@ ar:
       enable_sign_in_token_auth: تمكين مصادقة رمز البريد الإلكتروني
       enabled: مفعَّل
       enabled_msg: تم إلغاء تجميد حساب %{username}
+      flipboard_username: Flipboard ﺎﺴﻣ ﺎﻠﻤﺴﺘﺧﺪﻣ
       followers: المتابِعون
       follows: يتابع
       header: الرأسية
       inbox_url: رابط صندوق الوارد
+      invite_request_flipboard_username: Flipboard اسم المستخدم
       invite_request_text: أسباب للانضمام
       invited_by: تمت دعوته مِن طرف
       ip: عنوان الإيبي

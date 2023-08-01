@@ -66,10 +66,12 @@ sr:
       email_status: Статус е-поште
       enable: Омогући
       enabled: Укључено
+      flipboard_username: Flipboard kорисничко име
       followers: Пратиоци
       follows: Праћени
       header: Заглавље
       inbox_url: Адреса сандучета
+      invite_request_flipboard_username: Flipboard kорисничко име
       invite_request_text: Разлози за придруживање
       invited_by: Позван од стране
       ip: IP

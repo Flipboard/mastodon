@@ -70,10 +70,12 @@ nn:
       enable_sign_in_token_auth: Slå på e-post token autentisering
       enabled: Aktivert
       enabled_msg: Gjenaktiverte %{username} sin konto
+      flipboard_username: Flipboard brukarnamn
       followers: Fylgjarar
       follows: Fylgje
       header: Overskrift
       inbox_url: Innbokslenkje
+      invite_request_flipboard_username: Flipboard brukarnamn
       invite_request_text: Grunngjeving for å bli med
       invited_by: Innboden av
       ip: IP-adresse

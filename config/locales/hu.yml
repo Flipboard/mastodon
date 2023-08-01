@@ -70,10 +70,12 @@ hu:
       enable_sign_in_token_auth: Tokenes e-mail hitelesítés engedélyezése
       enabled: Bekapcsolva
       enabled_msg: A %{username} fiók fagyasztását sikeresen visszavontuk
+      flipboard_username: Flipboard felhasználónév
       followers: Követő
       follows: Követett
       header: Fejléc
       inbox_url: Beérkezett üzenetek URL-je
+      invite_request_flipboard_username: Flipboard felhasználónév
       invite_request_text: Csatlakozás oka
       invited_by: Meghívta
       ip: IP

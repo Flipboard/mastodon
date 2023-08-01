@@ -64,10 +64,12 @@ el:
       enable: Ενεργοποίηση
       enabled: Ενεργοποιημένο
       enabled_msg: Επιτυχές ξεπάγωμα λογαριασμού του/της %{username}
+      flipboard_username: Flipboard Όνομα χρήστη
       followers: Ακόλουθοι
       follows: Ακολουθεί
       header: Επικεφαλίδα
       inbox_url: URL εισερχομένων
+      invite_request_flipboard_username: Flipboard Όνομα χρήστη
       invite_request_text: Λόγοι για εγγραφή
       invited_by: Προσκλήθηκε από
       ip: IP
