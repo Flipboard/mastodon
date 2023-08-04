@@ -97,6 +97,9 @@ echo "S3_HOSTNAME=s3-us-east-1.amazonaws.com" >> /tmp/env.production
 if [[ "${mypool}" == "production" ]] ; then
   echo "S3_BUCKET=m-cdn.flipboard.social" >> /tmp/env.production
   echo "S3_ALIAS_HOST=m-cdn.flipboard.social" >> /tmp/env.production
+elif [[ "${mypool}" == "beta" ]] ; then
+  echo "S3_BUCKET=social-beta-cdn.flipboard.com" >> /tmp/env.production
+  echo "S3_ALIAS_HOST=social-beta-cdn.flipboard.com" >> /tmp/env.production
 else
   echo "S3_BUCKET=social-cdn.flipboard.com" >> /tmp/env.production
   echo "S3_ALIAS_HOST=social-cdn.flipboard.com" >> /tmp/env.production
