@@ -74,10 +74,12 @@ cs:
       enable_sign_in_token_auth: Povolit ověřování e-mailovým tokenem
       enabled: Povoleno
       enabled_msg: Účet %{username} byl úspěšně rozmrazen
+      flipboard_username: Flipboard uživatelské jméno
       followers: Sledující
       follows: Sledované
       header: Záhlaví
       inbox_url: URL příchozí schránky
+      invite_request_flipboard_username: Flipboard uživatelské jméno
       invite_request_text: Důvody založení
       invited_by: Pozván uživatelem
       ip: IP adresa

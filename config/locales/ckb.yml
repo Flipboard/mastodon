@@ -70,10 +70,12 @@ ckb:
       enable_sign_in_token_auth: ڕەسەنایەتی نیشانەی ئیمەیڵ چالاک بکە
       enabled: چالاککراوە
       enabled_msg: هەژمارە %{username} بە سەرکەوتوویی سنووردار کرا
+      flipboard_username: Flipboard ﻥﺍﻭی ﺏەکﺍﺮﻫێﻥەﺭ
       followers: شوێنکەوتوان
       follows: شوێنکەوتوان
       header: سەرپەڕە
       inbox_url: نیشانی هاتنەژوور
+      invite_request_flipboard_username: Flipboard ناوی بەکارهێنەر
       invite_request_text: هۆکارەکانی بەشداریکردن
       invited_by: بانگهێشتکراو لە لایەن
       ip: ئای‌پی

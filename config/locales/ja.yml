@@ -68,10 +68,12 @@ ja:
       enable_sign_in_token_auth: メールトークン認証を有効にする
       enabled: 有効
       enabled_msg: "%{username}の無効化を解除しました"
+      flipboard_username: Flipboard ユーザー名
       followers: フォロワー数
       follows: フォロー数
       header: ヘッダー
       inbox_url: Inbox URL
+      invite_request_flipboard_username: Flipboard ユーザー名
       invite_request_text: 意気込み
       invited_by: 招待した人
       ip: IP

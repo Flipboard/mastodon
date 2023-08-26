@@ -70,10 +70,12 @@ en:
       enable_sign_in_token_auth: Enable e-mail token authentication
       enabled: Enabled
       enabled_msg: Successfully unfroze %{username}'s account
+      flipboard_username: Flipboard username
       followers: Followers
       follows: Follows
       header: Header
       inbox_url: Inbox URL
+      invite_request_flipboard_username: Flipboard username
       invite_request_text: Reasons for joining
       invited_by: Invited by
       ip: IP
@@ -1063,7 +1065,7 @@ en:
       title: Login to %{domain}
     sign_up:
       manual_review: Sign-ups on %{domain} go through manual review by our moderators. To help us process your registration, write a bit about yourself and why you want an account on %{domain}.
-      preamble: With an account on this Mastodon server, you'll be able to follow any other person on the network, regardless of where their account is hosted.
+      preamble: Apply to join this Flipboard community on Mastodon. Once approved you will be able to connect with others, regardless of where their account is hosted.
       title: Let's get you set up on %{domain}.
     status:
       account_status: Account status
@@ -1778,13 +1780,13 @@ en:
     welcome:
       edit_profile_action: Setup profile
       edit_profile_step: You can customize your profile by uploading a profile picture, changing your display name and more. You can opt-in to review new followers before they’re allowed to follow you.
-      explanation: Here are some tips to get you started
+      explanation: You’ve been approved to join flipboard.social. Here are some tips to get you started
       final_action: Start posting
-      final_step: 'Start posting! Even without followers, your public posts may be seen by others, for example on the local timeline or in hashtags. You may want to introduce yourself on the #introductions hashtag.'
+      final_step: 'Start posting! Even without followers, your public posts may be seen by others, for example on the local timeline or in hashtags. You may want to introduce yourself on the #introductions hashtag, and share your favorite Flipboard Magazine when you do!'
       full_handle: Your full handle
-      full_handle_hint: This is what you would tell your friends so they can message or follow you from another server.
+      full_handle_hint: You can share your new handle with friends so they can message or follow you. It’s also how people can find you when they search on Mastodon.
       subject: Welcome to Mastodon
-      title: Welcome aboard, %{name}!
+      title: Welcome %{name}!
   users:
     follow_limit_reached: You cannot follow more than %{limit} people
     go_to_sso_account_settings: Go to your identity provider's account settings

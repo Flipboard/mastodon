@@ -1041,6 +1041,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_18_142253) do
     t.text "text"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.string "flipboard_username"
+    t.index ["flipboard_username"], name: "index_user_invite_requests_on_flipboard_username"
     t.index ["user_id"], name: "index_user_invite_requests_on_user_id"
   end
 

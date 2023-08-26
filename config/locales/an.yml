@@ -70,10 +70,12 @@ an:
       enable_sign_in_token_auth: Habilitar l'autenticación per token de correu electronico
       enabled: Habilitada
       enabled_msg: S'ha descongelado correctament la cuenta de %{username}
+      flipboard_username: Flipboard nombre d'usuario
       followers: Seguidores
       follows: Sigue
       header: Capitero
       inbox_url: URL d'a servilla de dentrada
+      invite_request_flipboard_username: Flipboard nombre d'usuario
       invite_request_text: Razons pa unir-se
       invited_by: Convidau per
       ip: IP

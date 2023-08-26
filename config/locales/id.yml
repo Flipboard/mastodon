@@ -68,10 +68,12 @@ id:
       enable_sign_in_token_auth: Aktifkan otentikasi token email
       enabled: Diaktifkan
       enabled_msg: Berhasil mencairkan akun %{username}
+      flipboard_username: Flipboard nama pengguna
       followers: Pengikut
       follows: Mengikut
       header: Tajuk
       inbox_url: URL Kotak masuk
+      invite_request_flipboard_username: Flipboard nama pengguna
       invite_request_text: Alasan bergabung
       invited_by: Diundang oleh
       ip: IP

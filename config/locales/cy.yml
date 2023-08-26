@@ -78,10 +78,12 @@ cy:
       enable_sign_in_token_auth: Galluogi dilysu tocynnau e-bost
       enabled: Wedi ei alluogi
       enabled_msg: Wedi dadrewi cyfrif %{username} yn llwyddiannus
+      flipboard_username: Flipboard enw defnyddiwr
       followers: Dilynwyr
       follows: Yn dilyn
       header: Pennyn
       inbox_url: URL blwch derbyn
+      invite_request_flipboard_username: Flipboard enw defnyddiwr
       invite_request_text: Rhesymau dros ymuno
       invited_by: Gwahoddwyd gan
       ip: IP

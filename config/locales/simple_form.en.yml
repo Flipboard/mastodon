@@ -105,6 +105,8 @@ en:
         data: CSV file exported from another Mastodon server
       invite_request:
         text: This will help us review your application
+      invite_request_flipboard_username:
+        text: You can find your username after the '@' on your profile page in the ios/android app or on your settings page when logged in via web at https://flipboard.com/settings/profile-settings
       ip_block:
         comment: Optional. Remember why you added this rule.
         expires_in: IP addresses are a finite resource, they are sometimes shared and often change hands. For this reason, indefinite IP blocks are not recommended.
@@ -271,6 +273,8 @@ en:
         comment: Comment
       invite_request:
         text: Why do you want to join?
+      invite_request_flipboard_username:
+        text: Flipboard username
       ip_block:
         comment: Comment
         ip: IP

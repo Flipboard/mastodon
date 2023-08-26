@@ -31,7 +31,8 @@
 
     .fields-group
       = f.simple_fields_for :invite_request, resource.invite_request || resource.build_invite_request do |invite_request_fields|
-        = invite_request_fields.input :text, as: :text, wrapper: :with_block_label, required: Setting.require_invite_text, label: false, hint: false
+        = invite_request_fields.input :text, as: :text, hint: t('simple_form.hints.invite_request.text'), wrapper: :with_block_label, required: Setting.require_invite_text
+        = invite_request_fields.input :flipboard_username, as: :text, hint: t('simple_form.hints.invite_request_flipboard_username.text'), wrapper: :with_block_label, required: Setting.require_invite_text
 
 
   = hidden_field_tag :accept, params[:accept]

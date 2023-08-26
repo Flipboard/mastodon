@@ -70,10 +70,12 @@ fi:
       enable_sign_in_token_auth: Ota sähköpostitunnuksen todennus käyttöön
       enabled: Käytössä
       enabled_msg: Käyttäjän %{username} tili palautettu onnistuneesti käyttöön
+      flipboard_username: Flipboard käyttäjätunnus
       followers: Seuraajat
       follows: Seuraa
       header: Otsakekuva
       inbox_url: Saapuvan postilaatikon osoite
+      invite_request_flipboard_username: Flipboard käyttäjätunnus
       invite_request_text: Syitä liittymiseen
       invited_by: Kutsuja
       ip: IP

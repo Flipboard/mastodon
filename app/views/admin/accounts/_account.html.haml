@@ -30,6 +30,8 @@
                 \-
               %br/
               %samp.ellipsized-ip= relevant_account_ip(account, params[:ip])
-    - if !account.suspended? && account.user_pending? && account.user&.invite_request&.text&.present?
+    - if !account.suspended? && account.user_pending? && account.user&.invite_request&.text&.present? && account.user&.invite_request&.flipboard_username&.present?
       .batch-table__row__content__quote
-        %p= account.user&.invite_request&.text
+        %p= link_to "Flipboard username: #{account.user&.invite_request&.flipboard_username}", "https://flct.service.flipboard.com/#/user?q=@#{account.user&.invite_request&.flipboard_username}"
+        %p= "Reasons for joining: #{account.user&.invite_request&.text}"
+
