@@ -25,8 +25,8 @@ sudo rm -rfd "${TARGET_DIR}/"backup.*
 sudo rm -rfd "${TARGET_DIR}/"*.tar.gz
 sudo rm -rfd "${TARGET_DIR}/"updater_post_install.sh
 sudo chmod -f 755 "${TARGET_DIR}"
-sudo chmod -f 755 "${TARGET_DIR}/live"
 if [[ -d "${TARGET_DIR}/live" ]] ; then
+  sudo chmod -f 755 "${TARGET_DIR}/live"
   sudo mkdir "${TARGET_DIR}/backup.${DATE}"
   sudo mv "${TARGET_DIR}/live" "${TARGET_DIR}/backup.${DATE}/live"
 fi
