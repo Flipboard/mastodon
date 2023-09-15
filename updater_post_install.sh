@@ -30,6 +30,7 @@ sudo cp -r "${SRC_DIR}"/live "${TARGET_DIR}"
 
 # get pool for s3 configs
 mypool="$(grep ec2.pool /ebsa/config/services.config | cut -d '=' -f 2 | head -1)"
+mycluster="$(grep ec2.cluster /ebsa/config/services.config | cut -d '=' -f 2 | head -1)"
 
 # copy over important configs
 local_domain="$(grep mastodon.local_domain /ebsa/config/services.config | cut -d '=' -f 2 | head -1)"
@@ -95,8 +96,13 @@ echo "S3_REGION=us-east-1" >> /tmp/env.production
 echo "S3_PROTOCOL=https" >> /tmp/env.production
 echo "S3_HOSTNAME=s3-us-east-1.amazonaws.com" >> /tmp/env.production
 if [[ "${mypool}" == "production" ]] ; then
-  echo "S3_BUCKET=m-cdn.flipboard.social" >> /tmp/env.production
-  echo "S3_ALIAS_HOST=m-cdn.flipboard.social" >> /tmp/env.production
+  if [[ "${mycluster}" == "surf" ]] ; then
+    echo "S3_BUCKET=m-cdn.surf.social" >> /tmp/env.production
+    echo "S3_ALIAS_HOST=m-cdn.surf.social" >> /tmp/env.production
+  else
+    echo "S3_BUCKET=m-cdn.flipboard.social" >> /tmp/env.production
+    echo "S3_ALIAS_HOST=m-cdn.flipboard.social" >> /tmp/env.production
+  fi
 elif [[ "${mypool}" == "beta" ]] ; then
   echo "S3_BUCKET=social-beta-cdn.flipboard.com" >> /tmp/env.production
   echo "S3_ALIAS_HOST=social-beta-cdn.flipboard.com" >> /tmp/env.production
