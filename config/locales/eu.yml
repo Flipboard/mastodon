@@ -70,10 +70,12 @@ eu:
       enable_sign_in_token_auth: Gaitu e-posta token autentifikazioa
       enabled: Gaituta
       enabled_msg: "%{username} kontua behar bezala desblokeatu da"
+      flipboard_username: Flipboard erabiltzaile-izena
       followers: Jarraitzaileak
       follows: Jarraitzen du
       header: Goiburua
       inbox_url: Sarrera ontziaren URL-a
+      invite_request_flipboard_username: Flipboard erabiltzaile-izena
       invite_request_text: Bat egiteko arrazoiak
       invited_by: 'Honek gonbidatua:'
       ip: IP-a
