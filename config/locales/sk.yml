@@ -74,10 +74,12 @@ sk:
       enable_sign_in_token_auth: Povolenie overovania e-mailovým tokenom
       enabled: Povolený
       enabled_msg: Úspešne rozmrazené konto %{username}
+      flipboard_username: Flipboard prezývka 
       followers: Sledujúci
       follows: Sledovania
       header: Záhlavie
       inbox_url: URL adresa prijatých správ
+      invite_request_flipboard_username: Flipboard prezývka
       invite_request_text: Dôvody pre prijatie
       invited_by: Pozvaný/á užívateľom
       ip: IP adresa

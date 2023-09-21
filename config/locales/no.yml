@@ -70,10 +70,12 @@
       enable_sign_in_token_auth: Aktiver godkjenning av e-post token
       enabled: Aktivert
       enabled_msg: Frossent %{username} sin konto
+      flipboard_username: Flipboard brukernavn
       followers: Følgere
       follows: Følginger
       header: Overskrift
       inbox_url: Innboks URL
+      invite_request_flipboard_username: Flipboard brukernavn
       invite_request_text: Begrunnelse for å bli med
       invited_by: Invitert av
       ip: IP-adresse

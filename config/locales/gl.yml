@@ -70,10 +70,12 @@ gl:
       enable_sign_in_token_auth: Activar autenticación cun token no email
       enabled: Activado
       enabled_msg: Desbloqueada a conta de %{username}
+      flipboard_username: Flipboard nome de usuaria
       followers: Seguidoras
       follows: Segue
       header: Cabeceira
       inbox_url: URL da caixa de entrada
+      invite_request_flipboard_username: Flipboard nome de usuaria
       invite_request_text: Razóns para unirte
       invited_by: Convidada por
       ip: IP

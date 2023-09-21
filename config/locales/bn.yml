@@ -70,6 +70,7 @@ bn:
       enable_sign_in_token_auth: ই-মেইল টোকেন প্রমাণীকরণ সক্ষম করুন
       enabled: চালু করুন
       enabled_msg: "%{username}-এর অ্যাকাউন্ট সফলভাবে আনফ্রোজ করা হয়েছে"
+      flipboard_username: Flipboard ব্যবহারকারীর নাম
       followers: অনুসরকারীরা
       follows: অনুসরণ করে
       header: শিরোলেখা
