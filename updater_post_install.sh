@@ -111,6 +111,7 @@ else
   echo "S3_ALIAS_HOST=social-cdn.flipboard.com" >> /tmp/env.production
 fi
 echo "STATSD_ADDR=localhost:8125" >> /tmp/env.production
+echo "STATSD_SIDEKIQ=true" >> /tmp/env.production
 
 sudo mv "/tmp/env.production" "${TARGET_DIR}/live/.env.production"
 
