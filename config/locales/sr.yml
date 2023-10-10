@@ -72,10 +72,12 @@ sr:
       enable_sign_in_token_auth: Омогући имејл аутентификацију
       enabled: Омогућен
       enabled_msg: Успешно одлеђен налог корисника %{username}
+      flipboard_username: Flipboard kорисничко име
       followers: Пратиоци
       follows: Праћени
       header: Заглавље
       inbox_url: Адреса сандучета
+      invite_request_flipboard_username: Flipboard kорисничко име
       invite_request_text: Разлози за придруживање
       invited_by: Позван од стране
       ip: IP

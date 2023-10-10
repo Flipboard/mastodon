@@ -72,10 +72,12 @@ ro:
       enable_sign_in_token_auth: Activează autentificarea prin token e-mail
       enabled: Activat
       enabled_msg: Am dezghețat cu succes contul %{username}
+      flipboard_username: Flipboard nume
       followers: Urmăritori
       follows: Urmăriri
       header: Antet
       inbox_url: URL mesaje primite
+      invite_request_flipboard_username: Flipboard nume
       invite_request_text: Motive pentru alăturare
       invited_by: Invitat de
       ip: IP

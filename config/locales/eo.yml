@@ -70,10 +70,12 @@ eo:
       enable_sign_in_token_auth: Ŝalti aŭtentigon per retpoŝta ĵetono
       enabled: Ebligita
       enabled_msg: Sukcese malfrostigis konton de %{username}
+      flipboard_username: Flipboard uzantnomo
       followers: Sekvantoj
       follows: Sekvatoj
       header: Kapa bildo
       inbox_url: Enira URL
+      invite_request_flipboard_username: Flipboard uzantnomo
       invite_request_text: 가입하려는 이유
       invited_by: Invitita de
       ip: IP
