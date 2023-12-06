@@ -70,10 +70,12 @@ io:
       enable_sign_in_token_auth: Aktivigez retpostofichyurizeso
       enabled: Aktivigita
       enabled_msg: Sucesoze desfrostigas konto di %{username}
+      flipboard_username: Flipboard uzantonomo
       followers: Uzanti
       follows: Uzati
       header: Kapimajo
       inbox_url: URL di mesajbuxo
+      invite_request_flipboard_username: Flipboard uzantonomo
       invite_request_text: Juntomotivo
       invited_by: Invitesis da
       ip: IP
