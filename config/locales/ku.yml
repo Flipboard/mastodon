@@ -70,10 +70,12 @@ ku:
       enable_sign_in_token_auth: E-name ya rastandina token çalak bike
       enabled: Çalakkirî
       enabled_msg: Ajimêrê %{username} bi serkeftî hat çalakkirin
+      flipboard_username: Flipboard navê bikarhêneriyê
       followers: Şopîner
       follows: Dişopîne
       header: Jormalper
       inbox_url: Girêdana peyamên hatî
+      invite_request_flipboard_username: Flipboard navê bikarhêneriyê
       invite_request_text: Sedemên tevlêbûnê
       invited_by: Bi vexwendinê
       ip: IP
