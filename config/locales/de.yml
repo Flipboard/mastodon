@@ -70,10 +70,12 @@ de:
       enable_sign_in_token_auth: E-Mail-Token-Authentisierung aktivieren
       enabled: Freigegeben
       enabled_msg: Konto von %{username} erfolgreich freigegeben
+      flipboard_username: Flipboard profilname
       followers: Follower
       follows: Folge ich
       header: Titelbild
       inbox_url: Posteingangsadresse
+      invite_request_flipboard_username: Flipboard profilname
       invite_request_text: Begründung für das Beitreten
       invited_by: Eingeladen von
       ip: IP-Adresse

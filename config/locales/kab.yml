@@ -54,10 +54,12 @@ kab:
       enable: Rmed
       enable_sign_in_token_auth: Rmed asesteb yebnan ɣef ujiṭun s yimayl
       enabled: Yermed
+      flipboard_username: Flipboard isem n useqdac
       followers: Imeḍfaṛen
       follows: Yeṭafaṛ
       header: Ixef
       inbox_url: URL n yinekcam
+      invite_request_flipboard_username: Flipboard isem n useqdac
       invite_request_text: Timental n tmerna
       invited_by: Inced-it-id
       ip: Tansa IP
