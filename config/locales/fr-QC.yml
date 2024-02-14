@@ -70,10 +70,12 @@ fr-QC:
       enable_sign_in_token_auth: Activer l'authentification basée sur les jetons envoyés par courriel
       enabled: Activé
       enabled_msg: Le compte de %{username} a été dégelé avec succès
+      flipboard_username: Flipboard nom d’utilisateur·ice
       followers: Abonné·e·s
       follows: Abonnements
       header: Entête
       inbox_url: URL d’entrée
+      invite_request_flipboard_username: Flipboard nom d’utilisateur·ice
       invite_request_text: Raisons de l’adhésion
       invited_by: Invité par
       ip: Adresse IP

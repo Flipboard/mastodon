@@ -70,10 +70,12 @@ sv:
       enable_sign_in_token_auth: Aktivera autentisering med e-post-token
       enabled: Aktiverad
       enabled_msg: Uppfrysningen av %{username}'s konto lyckades
+      flipboard_username: Flipboard användarnamn
       followers: Följare
       follows: Följs
       header: Rubrik
       inbox_url: Inkorgs URL
+      invite_request_flipboard_username: Flipboard användarnamn
       invite_request_text: Anledningar att gå med
       invited_by: Inbjuden av
       ip: IP-adress
