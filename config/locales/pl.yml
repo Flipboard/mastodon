@@ -74,10 +74,12 @@ pl:
       enable_sign_in_token_auth: Włącz uwierzytelnianie tokenu e-mail
       enabled: Aktywowano
       enabled_msg: Pomyślnie odblokowano konto %{username}
+      flipboard_username: Flipboard nazwa użytkownika
       followers: Obserwujący
       follows: Obserwowani
       header: Nagłówek
       inbox_url: Adres skrzynki
+      invite_request_flipboard_username: Flipboard nazwa użytkownika
       invite_request_text: Powody rejestracji
       invited_by: Zaproszony(-a) przez
       ip: Adres IP

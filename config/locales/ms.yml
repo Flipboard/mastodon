@@ -68,10 +68,12 @@ ms:
       enable_sign_in_token_auth: Dayakan pengesahan token e-mel
       enabled: Didayakan
       enabled_msg: Berjaya menyahbekukan akaun %{username}
+      flipboard_username: Flipboard nama pengguna
       followers: Pengikut
       follows: Mengikuti
       header: Pengepala
       inbox_url: URL mesej masuk
+      invite_request_flipboard_username: Flipboard nama pengguna
       invite_request_text: Sebab untuk menyertai
       invited_by: Diundang oleh
       ip: Alamat IP

@@ -70,10 +70,12 @@ da:
       enable_sign_in_token_auth: Aktivér e-mailtoken godkendelse
       enabled: Aktiveret
       enabled_msg: "%{username}s konto er optøet"
+      flipboard_username: Flipboard brugernavn
       followers: Følgere
       follows: Følger
       header: Overskrift
       inbox_url: Indbakke-URL
+      invite_request_flipboard_username: Flipboard brugernavn
       invite_request_text: Begrundelse for tilmelding
       invited_by: Inviteret af
       ip: IP

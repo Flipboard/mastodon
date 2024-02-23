@@ -70,10 +70,12 @@ es:
       enable_sign_in_token_auth: Habilitar la autenticación por token de correo electrónico
       enabled: Habilitada
       enabled_msg: Se ha descongelado correctamente la cuenta de %{username}
+      flipboard_username: Flipboard nombre de usuario
       followers: Seguidores
       follows: Sigue
       header: Cabecera
       inbox_url: URL de la bandeja de entrada
+      invite_request_flipboard_username: Flipboard nombre de usuario
       invite_request_text: Razones para unirse
       invited_by: Invitado por
       ip: IP
