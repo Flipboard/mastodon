@@ -91,9 +91,9 @@ services:
     ports:
       - 80:80
     depends_on:
-      - "app"
+      - 'app'
     links:
-      - "app:app"
+      - 'app:app'
     volumes:
       - ../public:/mastodon/public
       - ./mastodon.local.conf:/etc/nginx/conf.d/mastodon.local.conf
