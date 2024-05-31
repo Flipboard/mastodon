@@ -74,10 +74,12 @@ he:
       enable_sign_in_token_auth: הפעלת אסימון הזדהות בדוא״ל
       enabled: מופעל
       enabled_msg: ביטול השעית החשבון של %{username} בוצע בהצלחה
+      flipboard_username: Flipboard שם משתמש
       followers: עוקבים
       follows: נעקבים
       header: כותרת
       inbox_url: כתובת תיבת דואר נכנס
+      invite_request_flipboard_username: Flipboard שם משתמש
       invite_request_text: סיבות להצטרפות
       invited_by: הוזמן על ידי
       ip: כתובת IP
