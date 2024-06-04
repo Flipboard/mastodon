@@ -678,7 +678,7 @@ RSpec.describe Account do
   end
 
   describe 'MENTION_RE' do
-    subject { Account::MENTION_RE }
+    subject { described_class::MENTION_RE }
 
     it 'matches usernames in the middle of a sentence' do
       expect(subject.match('Hello to @alice from me')[1]).to eq 'alice'
@@ -746,13 +746,13 @@ RSpec.describe Account do
       end
 
       it 'is valid if we are creating an instance actor account with a period' do
-        account = Fabricate.build(:account, id: -99, actor_type: 'Application', locked: true, username: 'example.com')
+        account = Fabricate.build(:account, id: described_class::INSTANCE_ACTOR_ID, actor_type: 'Application', locked: true, username: 'example.com')
         expect(account.valid?).to be true
       end
 
       it 'is valid if we are creating a possibly-conflicting instance actor account' do
         _account = Fabricate(:account, username: 'examplecom')
-        instance_account = Fabricate.build(:account, id: -99, actor_type: 'Application', locked: true, username: 'example.com')
+        instance_account = Fabricate.build(:account, id: described_class::INSTANCE_ACTOR_ID, actor_type: 'Application', locked: true, username: 'example.com')
         expect(instance_account.valid?).to be true
       end
 
@@ -888,7 +888,7 @@ RSpec.describe Account do
           { username: 'b', domain: 'b' },
         ].map(&method(:Fabricate).curry(2).call(:account))
 
-        expect(described_class.where('id > 0').alphabetic).to eq matches
+        expect(described_class.without_internal.alphabetic).to eq matches
       end
     end
 
@@ -939,7 +939,7 @@ RSpec.describe Account do
       it 'returns an array of accounts who do not have a domain' do
         local_account = Fabricate(:account, domain: nil)
         _account_with_domain = Fabricate(:account, domain: 'example.com')
-        expect(described_class.where('id > 0').local).to contain_exactly(local_account)
+        expect(described_class.without_internal.local).to contain_exactly(local_account)
       end
     end
 
@@ -950,14 +950,14 @@ RSpec.describe Account do
           matches[index] = Fabricate(:account, domain: matches[index])
         end
 
-        expect(described_class.where('id > 0').partitioned).to match_array(matches)
+        expect(described_class.without_internal.partitioned).to match_array(matches)
       end
     end
 
     describe 'recent' do
       it 'returns a relation of accounts sorted by recent creation' do
         matches = Array.new(2) { Fabricate(:account) }
-        expect(described_class.where('id > 0').recent).to match_array(matches)
+        expect(described_class.without_internal.recent).to match_array(matches)
       end
     end
 
