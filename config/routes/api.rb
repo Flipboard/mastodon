@@ -207,6 +207,11 @@ namespace :api, format: false do
       resource :note, only: :create, controller: 'accounts/notes'
     end
 
+    # /api/v1/surf/accounts
+    namespace :surf do
+      resources :accounts, only: :create, controller: :accounts
+    end
+
     resources :tags, only: [:show] do
       member do
         post :follow
