@@ -154,6 +154,11 @@ namespace :api, format: false do
       end
     end
 
+    # surf/accounts
+    namespace :surf do
+      resources :accounts, only: :create, controller: :accounts
+    end
+
     namespace :accounts do
       get :verify_credentials, to: 'credentials#show'
       patch :update_credentials, to: 'credentials#update'
