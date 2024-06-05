@@ -15,5 +15,5 @@
 class UserInviteRequest < ApplicationRecord
   belongs_to :user, inverse_of: :invite_request
   validates :text, presence: true, length: { maximum: 420 }
-  validates :flipboard_username, presence: true, length: { maximum: 128 }
+  validates :flipboard_username, allow_blank: true, length: { maximum: 128 }
 end
