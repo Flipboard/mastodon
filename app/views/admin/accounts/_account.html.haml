@@ -34,4 +34,3 @@
       .batch-table__row__content__quote
         %p= link_to "Flipboard username: #{account.user&.invite_request&.flipboard_username}", "https://flct.service.flipboard.com/#/user?q=@#{account.user&.invite_request&.flipboard_username}"
         %p= "Reasons for joining: #{account.user&.invite_request&.text}"
-

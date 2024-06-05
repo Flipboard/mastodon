@@ -43,7 +43,7 @@ describe StatusLengthValidator do
     end
 
     it 'does not count non-autolinkable URLs as 23 characters flat' do
-      text   = ('a' * 476) + "http://#{'b' * 30}.com/example"
+      text   = ('a' * 4976) + "http://#{'b' * 30}.com/example"
       status = instance_double(Status, spoiler_text: '', text: text, errors: activemodel_errors, local?: true, reblog?: false)
 
       subject.validate(status)
@@ -66,7 +66,7 @@ describe StatusLengthValidator do
     end
 
     it 'does count both parts of remote usernames for overly long domains' do
-      text   = "@alice@#{'b' * 500}.com"
+      text   = "@alice@#{'b' * 5000}.com"
       status = instance_double(Status, spoiler_text: '', text: text, errors: activemodel_errors, local?: true, reblog?: false)
 
       subject.validate(status)
