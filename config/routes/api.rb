@@ -157,7 +157,7 @@ namespace :api, format: false do
     namespace :surf do
       resources :accounts, only: [:create], controller: :accounts
       # requires auth token
-      get 'user', to: 'users#show'
+      get 'users/whoami', to: 'users#whoami'
       get 'emails/confirmation', to: 'emails#confirmation'
     end
 

@@ -20,4 +20,4 @@ USER_ACCESS_TOKEN=`jq -r '.access_token' $user_token`
 curl -s -X GET "http://mastodon.local/api/v1/accounts/verify_credentials" -H "Authorization: Bearer $USER_ACCESS_TOKEN" | jq .
 
 echo "Get user details..."
-curl -s -X GET "http://mastodon.local/api/v1/surf/user" -H "Authorization: Bearer $USER_ACCESS_TOKEN" | jq .
+curl -s -X GET "http://mastodon.local/api/v1/surf/users/whoami" -H "Authorization: Bearer $USER_ACCESS_TOKEN" | jq .

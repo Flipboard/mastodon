@@ -4,7 +4,7 @@ class Api::V1::Surf::UsersController < Api::BaseController
   before_action -> { doorkeeper_authorize! :read }
   before_action :require_user!
 
-  def show
+  def whoami
     # the user serializer skips fields
     # add the confirmation_token if it exists...
     user = @current_user.as_json
