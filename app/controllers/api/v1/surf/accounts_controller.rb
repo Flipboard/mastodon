@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Api::V1::Surf::AccountsController < Api::BaseController
-
   before_action -> { doorkeeper_authorize! :write, :'write:accounts' }, only: [:create]
   before_action :check_enabled_registrations, only: [:create]
 
@@ -35,5 +34,4 @@ class Api::V1::Surf::AccountsController < Api::BaseController
   def omniauth_only?
     ENV['OMNIAUTH_ONLY'] == 'true'
   end
-
 end
