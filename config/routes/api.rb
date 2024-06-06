@@ -154,9 +154,11 @@ namespace :api, format: false do
       end
     end
 
-    # surf/accounts
     namespace :surf do
-      resources :accounts, only: :create, controller: :accounts
+      resources :accounts, only: [:create], controller: :accounts
+      # requires auth token
+      get 'user', to: 'users#show'
+      get 'emails/confirmation', to: 'emails#confirmation'
     end
 
     namespace :accounts do
