@@ -6,9 +6,11 @@
 # Running Apps
 
 From the root of the repo run this the first time:
+
 - `docker-compose -f dev/docker-compose.yml up --build`
 
 Or, if restarting:
+
 - `docker-compose -f dev/docker-compose.yml up`
 
 The app takes a while to start. Patience, my friend.
@@ -42,6 +44,7 @@ The developer setup doesn't configure SSL and uses nginx as a reverse proxy (see
 - `docker-compose -f dev/docker-compose.yml down`
 
 This is helpful if we're making changes to how the docker-compose stuff runs and we want to start fresh:
+
 - `./dev/clean.sh`
 
 # OAuth Client Testing

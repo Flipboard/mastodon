@@ -16,11 +16,12 @@ class Api::V1::Surf::UsersController < Api::BaseController
   # unconfirmed user access and might need to
   # get the confirmation_token for sending the email
   protected
+
   def require_user!
-    if !current_user
-      render json: { error: 'This method requires an authenticated user' }, status: 422
-    else
+    if current_user
       update_user_sign_in
+    else
+      render json: { error: 'This method requires an authenticated user' }, status: 422
     end
   end
 end
