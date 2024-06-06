@@ -7,7 +7,7 @@ class Api::V1::Surf::EmailsController < Api::BaseController
   before_action :current_user
 
   def confirmation
-    confirmation_params = { :confirmation_token => @current_user.confirmation_token }
+    confirmation_params = { confirmation_token: @current_user.confirmation_token }
     confirmation_url = "/auth/confirmation?#{confirmation_params.to_query}"
     render json: {
       base_url: request.base_url,
