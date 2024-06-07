@@ -9,3 +9,6 @@ echo "User access_token: $USER_ACCESS_TOKEN"
 # Email endpoints
 echo "Get surf/emails/confirmation"
 curl -s -X GET "http://mastodon.local/api/v1/surf/emails/confirmation" -H "Authorization: Bearer $USER_ACCESS_TOKEN" | jq .
+
+echo "Get surf/emails/welcome"
+curl -s -X GET "http://mastodon.local/api/v1/surf/emails/welcome" -H "Authorization: Bearer $USER_ACCESS_TOKEN" | jq .

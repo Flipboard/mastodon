@@ -156,9 +156,16 @@ namespace :api, format: false do
 
     namespace :surf do
       resources :accounts, only: [:create], controller: :accounts
-      # requires auth token
+
+      # users
+      post 'users/sign_in', to: 'users#sign_in'
+      post 'users/sign_out', to: 'users#sign_out'
+      get 'users/confirmation', to: 'users#confirmation'
       get 'users/whoami', to: 'users#whoami'
+
+      # emails
       get 'emails/confirmation', to: 'emails#confirmation'
+      get 'emails/welcome', to: 'emails#welcome'
     end
 
     namespace :accounts do

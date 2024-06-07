@@ -3,7 +3,7 @@
 class Api::V1::Surf::EmailsController < Api::BaseController
   # Notes:
   # - Requires an access token.
-  # = @current_user is the access token resource owner
+  # - @current_user is the access token resource owner
   before_action :current_user
 
   def confirmation
@@ -12,6 +12,14 @@ class Api::V1::Surf::EmailsController < Api::BaseController
     render json: {
       base_url: request.base_url,
       confirmation_url: confirmation_url,
+      username: @current_user.account.username,
+      email: @current_user.email,
+    }
+  end
+
+  def welcome
+    render json: {
+      base_url: request.base_url,
       username: @current_user.account.username,
       email: @current_user.email,
     }
