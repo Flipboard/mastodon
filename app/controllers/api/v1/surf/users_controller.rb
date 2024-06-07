@@ -15,7 +15,7 @@ class Api::V1::Surf::UsersController < Api::BaseController
   def sign_in
     # Requires: app access_token
     @current_user = User.find_by(email: params[:email])
-    raise(ActiveRecord::RecordNotFound) unless @current_user && @current_user.valid_password?(params[:password])
+    raise(ActiveRecord::RecordNotFound) unless @current_user&.valid_password?(params[:password])
 
     require_not_suspended!
 
@@ -55,7 +55,7 @@ class Api::V1::Surf::UsersController < Api::BaseController
     # Requires: app access_token
     # Requires: confirmation_token
     confirmation_token = params[:confirmation_token]
-    raise Mastodon::InvalidParameterError, "Missing confirmation_token" unless confirmation_token
+    raise Mastodon::InvalidParameterError, 'Missing confirmation_token' unless confirmation_token
 
     @current_user = User.find_first_by_auth_conditions(confirmation_token: confirmation_token)
     raise(ActiveRecord::RecordNotFound) unless @current_user
@@ -63,7 +63,7 @@ class Api::V1::Surf::UsersController < Api::BaseController
     # update confirmed_at, reset confirmation_token
     @current_user.update!(
       confirmed_at: Time.current,
-      confirmation_token: nil,
+      confirmation_token: nil
     )
     prepare_new_user!
     render json: { message: 'User confirmed.' }, status: 200
@@ -73,7 +73,9 @@ class Api::V1::Surf::UsersController < Api::BaseController
 
   def revoke_access!
     # this method revokes all tokens for the current user
-    Doorkeeper::AccessToken.where(resource_owner_id: @current_user.id).update_all(revoked_at: Time.current)
+    Doorkeeper::AccessToken.by_resource_owner(@current_user).in_batches do |batch|
+      batch.update_all(revoked_at: Time.now.utc) # rubocop:disable Rails/SkipsModelValidations
+    end
   end
 
   def require_user!
@@ -97,5 +99,4 @@ class Api::V1::Surf::UsersController < Api::BaseController
   def prepare_returning_user!
     ActivityTracker.record('activity:logins', @current_user.id)
   end
-
 end
