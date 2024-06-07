@@ -120,6 +120,7 @@ fi
 echo "STATSD_ADDR=localhost:8125" >> /tmp/env.production
 echo "MAX_FOLLOWS_THRESHOLD=750_000" >> /tmp/env.production
 echo "DISABLE_AUTOMATIC_SWITCHING_TO_APPROVED_REGISTRATIONS=true" >> /tmp/env.production
+echo "TRUSTED_PROXY_IP=172.30.0.0/16,127.0.0.1/32" >> /tmp/env.production
 
 sudo mv "/tmp/env.production" "${TARGET_DIR}/live/.env.production"
 
