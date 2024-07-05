@@ -71,9 +71,11 @@ tr:
       enabled: Etkin
       enabled_msg: "%{username} hesabı başarıyla çözüldü"
       followers: Takipçi
+      flipboard_username: Flipboard kullanıcı adı
       follows: Takip edilen
       header: Üstbilgi
       inbox_url: Gelen kutusu bağlantısı
+      invite_request_flipboard_username: Flipboard kullanıcı adı
       invite_request_text: Katılma gerekçeleri
       invited_by: Tarafından davet edildi
       ip: IP

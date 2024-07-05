@@ -68,10 +68,12 @@ th:
       enable_sign_in_token_auth: เปิดใช้งานการรับรองความถูกต้องด้วยโทเคนอีเมล
       enabled: เปิดใช้งานอยู่
       enabled_msg: เลิกอายัดบัญชีของ %{username} สำเร็จ
+      flipboard_username: Flipboard ชื่อผู้ใช้
       followers: ผู้ติดตาม
       follows: การติดตาม
       header: ส่วนหัว
       inbox_url: URL ของกล่องขาเข้า
+      invite_request_flipboard_username: Flipboard ชื่อผู้ใช้
       invite_request_text: เหตุผลสำหรับการเข้าร่วม
       invited_by: เชิญโดย
       ip: IP
