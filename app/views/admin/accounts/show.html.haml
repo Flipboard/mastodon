@@ -175,6 +175,13 @@
               %td= admin_account_link_to @account.user.invite.user.account
               %td
 
+          %tr
+            %th= t('admin.accounts.invite_request_flipboard_username')
+            %td
+              - if @account.user&.invite_request&.flipboard_username&.present?
+                = link_to @account.user&.invite_request&.flipboard_username, "https://flct.service.flipboard.com/#/user?q=@#{@account.user&.invite_request&.flipboard_username}"
+            %td
+
         - else
           %tr
             %th= t('admin.accounts.inbox_url')

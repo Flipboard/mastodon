@@ -70,10 +70,12 @@ bg:
       enable_sign_in_token_auth: Включване на удостоверяването с маркер по имейл
       enabled: Включено
       enabled_msg: Успешно размразяване на акаунта на %{username}
+      flipboard_username: Flipboard Потребителско име
       followers: Последователи
       follows: Последвания
       header: Заглавка
       inbox_url: Входящ URL
+      invite_request_flipboard_username: Flipboard Потребителско име
       invite_request_text: Причини за присъединяване
       invited_by: Покана от
       ip: IP адрес
