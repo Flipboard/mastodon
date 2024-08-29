@@ -70,10 +70,12 @@ is:
       enable_sign_in_token_auth: Virkja auðkenningu með teikni í tölvupósti
       enabled: Virkt
       enabled_msg: Tókst að affrysta aðgang notandans %{username}
+      flipboard_username: Flipboard notandanafn
       followers: Fylgjendur
       follows: Fylgist með
       header: Haus
       inbox_url: Slóð á innhólf
+      invite_request_flipboard_username: Flipboard notandanafn
       invite_request_text: Ástæður fyrir þátttöku
       invited_by: Boðið af
       ip: IP-vistfang

@@ -70,10 +70,12 @@ sq:
       enable_sign_in_token_auth: Aktivizo mirëfilltësim me token email-i
       enabled: E aktivizuar
       enabled_msg: U hoq me sukses ngrirja për llogarinë e %{username}
+      flipboard_username: Flipboard emër përdoruesi
       followers: Ndjekës
       follows: Ndjekje
       header: Krye
       inbox_url: URL Mesazhesh të Marrë
+      invite_request_flipboard_username: Flipboard emër përdoruesi
       invite_request_text: Arsye për pjesëmarrje
       invited_by: Ftuar nga
       ip: IP

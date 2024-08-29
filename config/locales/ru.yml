@@ -72,10 +72,12 @@ ru:
       enable: Включить
       enabled: Включен
       enabled_msg: Учётная запись %{username} успешно разморожена
+      flipboard_username: Flipboard Имя пользователя
       followers: Подписчики
       follows: Подписки
       header: Шапка
       inbox_url: URL входящих
+      invite_request_flipboard_username: Flipboard Имя пользователя
       invite_request_text: Причины для присоединения
       invited_by: Приглашение выдал(а)
       ip: IP

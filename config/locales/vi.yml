@@ -68,10 +68,12 @@ vi:
       enable_sign_in_token_auth: Bật xác minh bằng email
       enabled: Đã duyệt
       enabled_msg: Đã kích hoạt lại tài khoản %{username} thành công
+      flipboard_username: Flipboard tài khoản
       followers: Người theo dõi
       follows: Đang theo dõi
       header: Ảnh bìa
       inbox_url: Hộp thư của người này
+      invite_request_flipboard_username: Flipboard tài khoản
       invite_request_text: Lý do đăng ký
       invited_by: Được mời bởi
       ip: IP

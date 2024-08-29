@@ -74,10 +74,12 @@ sl:
       enable_sign_in_token_auth: Omogoči overjanje z žetonom po e-pošti
       enabled: Omogočeno
       enabled_msg: Uspešno odmrznjen račun uporabnika %{username}
+      flipboard_username: Flipboard uporabniško ime
       followers: Sledilci
       follows: Sledi
       header: Glava
       inbox_url: URL mape "Prejeto"
+      invite_request_flipboard_username: Flipboard uporabniško ime
       invite_request_text: Razlogi za pridružitev
       invited_by: Na povabilo
       ip: IP

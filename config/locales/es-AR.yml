@@ -70,10 +70,12 @@ es-AR:
       enable_sign_in_token_auth: Habilitar autenticación de token por correo electrónico
       enabled: Habilitada
       enabled_msg: Se descongeló exitosamente la cuenta de %{username}
+      flipboard_username: Flipboard nombre de usuario
       followers: Seguidores
       follows: Siguiendo
       header: Cabecera
       inbox_url: Dirección web de la bandeja de entrada
+      invite_request_flipboard_username: Flipboard nombre de usuario
       invite_request_text: Motivos para unirte
       invited_by: Invitado por
       ip: Dirección IP

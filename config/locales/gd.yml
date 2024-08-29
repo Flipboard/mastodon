@@ -74,10 +74,12 @@ gd:
       enable_sign_in_token_auth: Cuir an comas dearbhadh le tòcan puist-d
       enabled: An comas
       enabled_msg: Chaidh an cunntas aig %{username} a dhì-reòthadh
+      flipboard_username: Flipboard ainm-cleachdaiche
       followers: Luchd-leantainn
       follows: A’ leantainn
       header: Bann-cinn
       inbox_url: URL a’ bhogsa a-steach
+      invite_request_flipboard_username: Flipboard ainm-cleachdaiche
       invite_request_text: Adhbharan na ballrachd
       invited_by: Air cuireadh fhaighinn o
       ip: IP
