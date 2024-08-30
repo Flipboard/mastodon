@@ -134,7 +134,7 @@ sudo mv "/tmp/env.production" "${TARGET_DIR}/live/.env.production"
 sudo chown -R mastodon:mastodon /home/mastodon
 
 # build the code
-sudo -i -u mastodon bash --login -c 'cd live; export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH; export RAILS_ENV=production; bundle config deployment "true"; bundle config without "development test"; bundle install; yarn install'
+sudo -i -u mastodon bash --login -c 'cd live; export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH; export RAILS_ENV=production; bundle config deployment "true"; bundle config without "development test"; bundle install; yarn install --immutable'
 
 # generate assets
 sudo -i -u mastodon bash --login -c 'cd live; export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH; RAILS_ENV=production bundle exec rails assets:precompile'
