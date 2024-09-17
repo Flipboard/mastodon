@@ -65,10 +65,12 @@ ckb:
       email_status: دۆخی ئیمەیڵ
       enable: چالاک کردن
       enabled: چالاککراوە
+      flipboard_username: Flipboard ﻥﺍﻭی ﺏەکﺍﺮﻫێﻥەﺭ
       enabled_msg: هەژمارە %{username} بە سەرکەوتوویی سنووردار کرا
       followers: شوێنکەوتوان
       follows: شوێنکەوتوان
       header: سەرپەڕە
+      invite_request_flipboard_username: Flipboard ناوی بەکارهێنەر
       inbox_url: نیشانی هاتنەژوور
       invite_request_text: هۆکارەکانی بەشداریکردن
       invited_by: بانگهێشتکراو لە لایەن
