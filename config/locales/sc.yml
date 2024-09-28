@@ -60,10 +60,12 @@ sc:
       enable: Ativa
       enabled: Ativadu
       enabled_msg: Su contu de %{username} est istadu ativadu
+      flipboard_username: Flipboard nòmine utente
       followers: Sighiduras
       follows: Sighende
       header: Intestatzione
       inbox_url: URL de intrada
+      invite_request_flipboard_username: Flipboard nòmine utente
       invite_request_text: Resones pro aderire
       invited_by: Invitu dae
       ip: IP
