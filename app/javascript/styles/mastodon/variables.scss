@@ -9,6 +9,10 @@ $blurple-400: #7477fd; // Medium slate blue
 $blurple-300: #858afa; // Faded Blue
 $grey-600: hsl(240deg, 8%, 33%); // Trout
 $grey-100: hsl(240deg, 51%, 90%); // Topaz
+$flipboard-600: #f52828;
+$flipboard-500: #f53838;
+$flipboard-400: #f54848;
+$flipboard-300: #f55858;
 
 $success-green: #79bd9a !default; // Padua
 $error-red: $red-500 !default; // Cerise
@@ -21,7 +25,7 @@ $red-bookmark: $warning-red;
 $classic-base-color: hsl(240deg, 16%, 19%);
 $classic-primary-color: hsl(240deg, 29%, 70%);
 $classic-secondary-color: hsl(255deg, 25%, 88%);
-$classic-highlight-color: $blurple-500;
+$classic-highlight-color: $flipboard-500;
 
 // Variables for defaults in UI
 $base-shadow-color: $black !default;
@@ -41,19 +45,19 @@ $ui-primary-color: $classic-primary-color !default; // Lighter
 $ui-secondary-color: $classic-secondary-color !default; // Lightest
 $ui-highlight-color: $classic-highlight-color !default;
 $ui-button-color: $white !default;
-$ui-button-background-color: $blurple-500 !default;
-$ui-button-focus-background-color: $blurple-600 !default;
-$ui-button-focus-outline-color: $blurple-400 !default;
+$ui-button-background-color: $flipboard-500 !default;
+$ui-button-focus-background-color: $flipboard-600 !default;
+$ui-button-focus-outline-color: $flipboard-400 !default;
 $ui-button-focus-outline: solid 2px $ui-button-focus-outline-color !default;
 
-$ui-button-secondary-color: $blurple-500 !default;
-$ui-button-secondary-border-color: $blurple-500 !default;
-$ui-button-secondary-focus-border-color: $blurple-300 !default;
-$ui-button-secondary-focus-color: $blurple-300 !default;
+$ui-button-secondary-color: $flipboard-500 !default;
+$ui-button-secondary-border-color: $flipboard-500 !default;
+$ui-button-secondary-focus-border-color: $flipboard-300 !default;
+$ui-button-secondary-focus-color: $flipboard-300 !default;
 
-$ui-button-tertiary-color: $blurple-300 !default;
-$ui-button-tertiary-border-color: $blurple-300 !default;
-$ui-button-tertiary-focus-background-color: $blurple-600 !default;
+$ui-button-tertiary-color: $flipboard-300 !default;
+$ui-button-tertiary-border-color: $flipboard-300 !default;
+$ui-button-tertiary-focus-background-color: $flipboard-600 !default;
 $ui-button-tertiary-focus-color: $white !default;
 
 $ui-button-destructive-background-color: $red-500 !default;
