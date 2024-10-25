@@ -20,6 +20,11 @@ $blurple-300: hsl(237deg, 92%, 75%); // Faded Blue
 $grey-600: hsl(240deg, 8%, 33%); // Trout
 $grey-100: hsl(240deg, 51%, 90%); // Topaz
 
+$aqua-light: #0bf9ea; // Bright Aqua
+$aqua-dark: #249d9f; // Dark Aqua
+
+$underline-color: $aqua-light; 
+
 // Differences
 $success-green: lighten(hsl(138deg, 32%, 35%), 8%);
 
