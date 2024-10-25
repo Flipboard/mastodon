@@ -4113,7 +4113,9 @@ $ui-header-logo-wordmark-width: 99px;
       &:hover,
       &:active,
       &:focus {
-        color: $primary-text-color;
+        text-decoration: underline;
+        text-decoration-color: $underline-color;
+        color: $underline-color;
       }
     }
 
@@ -4135,7 +4137,8 @@ a.status-card {
     .status-card__host,
     .status-card__author,
     .status-card__description {
-      color: $highlight-text-color;
+      color: $underline-color;
+
     }
   }
 }
@@ -4151,7 +4154,7 @@ a.status-card {
     .status-card__host,
     .status-card__author,
     .status-card__description {
-      color: $highlight-text-color;
+      color: $underline-color;
     }
   }
 }
