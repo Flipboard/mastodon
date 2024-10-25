@@ -38,6 +38,7 @@
   &:hover,
   &:active {
     text-decoration: underline;
+    text-decoration-color: $underline-color;
   }
 
   &:disabled {
@@ -582,6 +583,7 @@ body > [data-popper-placement] {
       color: $lighter-text-color;
       font-weight: 500;
       text-decoration: underline;
+      text-decoration-color: $underline-color;
 
       &:hover,
       &:active,
@@ -978,6 +980,7 @@ body > [data-popper-placement] {
 
       &:hover {
         text-decoration: underline;
+        text-decoration-color: $underline-color;
       }
     }
   }
@@ -1056,6 +1059,7 @@ body > [data-popper-placement] {
 
     &:hover {
       text-decoration: underline;
+      text-decoration-color: $underline-color;
     }
 
     &.mention {
@@ -1064,6 +1068,7 @@ body > [data-popper-placement] {
 
         span {
           text-decoration: underline;
+          text-decoration-color: $underline-color;
         }
       }
     }
@@ -1224,6 +1229,7 @@ body > [data-popper-placement] {
       &:focus,
       &:active {
         text-decoration: underline;
+        text-decoration-color: $underline-color;
       }
     }
   }
@@ -1295,6 +1301,7 @@ body > [data-popper-placement] {
 
     &:hover {
       text-decoration: underline;
+      text-decoration-color: $underline-color;
     }
 
     &.mention {
@@ -1303,6 +1310,7 @@ body > [data-popper-placement] {
 
         span {
           text-decoration: underline;
+          text-decoration-color: $underline-color;
         }
       }
     }
@@ -1333,6 +1341,7 @@ body > [data-popper-placement] {
   &:hover,
   &:active {
     text-decoration: underline;
+    text-decoration-color: $underline-color;
   }
 
   .icon {
@@ -1390,6 +1399,7 @@ body > [data-popper-placement] {
     &:hover,
     &:active {
       text-decoration: underline;
+      text-decoration-color: $underline-color;
     }
   }
 }
@@ -2228,6 +2238,7 @@ a .account__avatar {
 a.account__display-name {
   &:hover .display-name strong {
     text-decoration: underline;
+    text-decoration-color: $underline-color;
   }
 }
 
@@ -2419,6 +2430,7 @@ a.account__display-name {
 
   &:hover {
     text-decoration: underline;
+    text-decoration-color: $underline-color;
   }
 }
 
@@ -2443,6 +2455,7 @@ a.account__display-name {
 .detailed-status__datetime {
   &:hover {
     text-decoration: underline;
+    text-decoration-color: $underline-color;
   }
 }
 
@@ -2608,6 +2621,7 @@ a.account__display-name {
 
     &:hover {
       text-decoration: underline;
+      text-decoration-color: $underline-color;
     }
 
     .icon {
@@ -3717,6 +3731,7 @@ $ui-header-logo-wordmark-width: 99px;
 
   &:hover {
     text-decoration: underline;
+    text-decoration-color: $underline-color;
   }
 }
 
@@ -3736,6 +3751,7 @@ $ui-header-logo-wordmark-width: 99px;
 
   &:hover {
     text-decoration: underline;
+    text-decoration-color: $underline-color;
   }
 
   &.compact {
@@ -4323,6 +4339,7 @@ a.status-card {
     &:active {
       text-decoration: underline;
       color: lighten($highlight-text-color, 4%);
+      text-decoration-color: $underline-color;
     }
   }
 
@@ -4617,6 +4634,7 @@ a.status-card {
   &:focus {
     color: $darker-text-color;
     text-decoration: underline;
+    text-decoration-color: $underline-color;
   }
 }
 
@@ -4628,6 +4646,7 @@ a.status-card {
   display: inline;
   font-weight: inherit;
   text-decoration: underline;
+  text-decoration-color: $underline-color;
 }
 
 .column-header__setting-arrows {
@@ -4660,6 +4679,7 @@ a.status-card {
   &:hover {
     color: $error-red;
     text-decoration: underline;
+    text-decoration-color: $underline-color;
   }
 }
 
@@ -5078,6 +5098,7 @@ a.status-card {
 
     &:hover {
       text-decoration: underline;
+      text-decoration-color: $underline-color;
     }
   }
 }
@@ -5755,6 +5776,7 @@ a.status-card {
       &:active,
       &:focus {
         text-decoration: underline;
+        text-decoration-color: $underline-color;
       }
     }
   }
@@ -6536,6 +6558,7 @@ a.status-card {
 
       &:hover {
         text-decoration: underline;
+        text-decoration-color: $underline-color;
       }
     }
   }
@@ -7087,6 +7110,7 @@ a.status-card {
 
       &:hover {
         text-decoration: underline;
+        text-decoration-color: $underline-color;
       }
     }
   }
@@ -7611,6 +7635,7 @@ a.status-card {
       &:active,
       &:focus {
         text-decoration: underline;
+        text-decoration-color: $underline-color;
       }
     }
   }
@@ -7892,6 +7917,7 @@ noscript {
     a {
       color: $highlight-text-color;
       text-decoration: underline;
+      text-decoration-color: $underline-color;
 
       &:hover {
         text-decoration: none;
@@ -8171,6 +8197,7 @@ noscript {
   a {
     color: inherit;
     text-decoration: underline;
+    text-decoration-color: $underline-color;
 
     &:hover {
       text-decoration: none;
@@ -8561,6 +8588,7 @@ noscript {
         &:active {
           span {
             text-decoration: underline;
+            text-decoration-color: $underline-color;
           }
         }
       }
@@ -8709,6 +8737,7 @@ noscript {
         &:focus,
         &:active {
           text-decoration: underline;
+          text-decoration-color: $underline-color;
         }
       }
     }
@@ -9243,6 +9272,7 @@ noscript {
     a {
       color: inherit;
       text-decoration: underline;
+      text-decoration-color: $underline-color;
 
       &:hover,
       &:active,
@@ -9691,6 +9721,7 @@ noscript {
   a {
     color: $highlight-text-color;
     text-decoration: underline;
+    text-decoration-color: $underline-color;
 
     &:focus,
     &:hover,
@@ -9888,6 +9919,7 @@ noscript {
     a {
       color: $dark-text-color;
       text-decoration: underline;
+      text-decoration-color: $underline-color;
 
       &:hover,
       &:focus,
@@ -10996,6 +11028,7 @@ noscript {
     a {
       color: inherit;
       text-decoration: underline;
+      text-decoration-color: $underline-color;
 
       &:hover,
       &:focus,
@@ -11052,6 +11085,7 @@ noscript {
       &:hover,
       &:active {
         text-decoration: underline;
+        text-decoration-color: $underline-color;
       }
     }
 
