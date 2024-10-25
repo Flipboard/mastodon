@@ -1079,7 +1079,16 @@ body > [data-popper-placement] {
   }
 
   a.unhandled-link {
-    color: $underline-color;
+    color: $highlight-text-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+      text-decoration-color: $underline-color;
+      color: $underline-color;
+    }
   }
 
   .status__content__spoiler-link {
