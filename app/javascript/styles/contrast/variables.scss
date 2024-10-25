@@ -15,7 +15,7 @@ $ui-highlight-color: $classic-highlight-color !default;
 $darker-text-color: lighten($ui-primary-color, 20%) !default;
 $dark-text-color: lighten($ui-primary-color, 12%) !default;
 $secondary-text-color: lighten($ui-secondary-color, 6%) !default;
-$highlight-text-color: lighten($ui-highlight-color, 10%) !default;
+$highlight-text-color: #00ffff !default;
 $action-button-color: lighten($ui-base-color, 50%);
 
 $inverted-text-color: $black !default;
