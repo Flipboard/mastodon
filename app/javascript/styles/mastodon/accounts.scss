@@ -296,6 +296,7 @@
     &:active {
       text-decoration: underline;
       text-decoration-color: $underline-color;
+      color: $underline-color;
     }
   }
 
@@ -335,6 +336,7 @@
       &:focus {
         text-decoration: underline;
         text-decoration-color: $underline-color;
+        color: $underline-color;
       }
     }
 

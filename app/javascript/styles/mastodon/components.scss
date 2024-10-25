@@ -39,6 +39,7 @@
   &:active {
     text-decoration: underline;
     text-decoration-color: $underline-color;
+    color: $underline-color;
   }
 
   &:disabled {
@@ -580,10 +581,10 @@ body > [data-popper-placement] {
     }
 
     a {
-      color: $lighter-text-color;
       font-weight: 500;
       text-decoration: underline;
       text-decoration-color: $underline-color;
+      color: $underline-color;
 
       &:hover,
       &:active,
@@ -981,6 +982,7 @@ body > [data-popper-placement] {
       &:hover {
         text-decoration: underline;
         text-decoration-color: $underline-color;
+        color: $underline-color;
       }
     }
   }
@@ -1060,6 +1062,7 @@ body > [data-popper-placement] {
     &:hover {
       text-decoration: underline;
       text-decoration-color: $underline-color;
+      color: $underline-color;
     }
 
     &.mention {
@@ -1069,6 +1072,7 @@ body > [data-popper-placement] {
         span {
           text-decoration: underline;
           text-decoration-color: $underline-color;
+          color: $underline-color;
         }
       }
     }
@@ -1230,6 +1234,7 @@ body > [data-popper-placement] {
       &:active {
         text-decoration: underline;
         text-decoration-color: $underline-color;
+        color: $underline-color;
       }
     }
   }
@@ -1302,6 +1307,7 @@ body > [data-popper-placement] {
     &:hover {
       text-decoration: underline;
       text-decoration-color: $underline-color;
+      color: $underline-color;
     }
 
     &.mention {
@@ -1311,6 +1317,7 @@ body > [data-popper-placement] {
         span {
           text-decoration: underline;
           text-decoration-color: $underline-color;
+          color: $underline-color;
         }
       }
     }
@@ -1342,6 +1349,7 @@ body > [data-popper-placement] {
   &:active {
     text-decoration: underline;
     text-decoration-color: $underline-color;
+    color: $underline-color;
   }
 
   .icon {
@@ -1400,6 +1408,7 @@ body > [data-popper-placement] {
     &:active {
       text-decoration: underline;
       text-decoration-color: $underline-color;
+      color: $underline-color;
     }
   }
 }
@@ -2239,6 +2248,7 @@ a.account__display-name {
   &:hover .display-name strong {
     text-decoration: underline;
     text-decoration-color: $underline-color;
+    color: $underline-color;
   }
 }
 
@@ -2431,6 +2441,7 @@ a.account__display-name {
   &:hover {
     text-decoration: underline;
     text-decoration-color: $underline-color;
+    color: $underline-color;
   }
 }
 
@@ -2456,6 +2467,7 @@ a.account__display-name {
   &:hover {
     text-decoration: underline;
     text-decoration-color: $underline-color;
+    color: $underline-color;
   }
 }
 
@@ -2622,6 +2634,7 @@ a.account__display-name {
     &:hover {
       text-decoration: underline;
       text-decoration-color: $underline-color;
+      color: $underline-color;
     }
 
     .icon {
@@ -3732,6 +3745,7 @@ $ui-header-logo-wordmark-width: 99px;
   &:hover {
     text-decoration: underline;
     text-decoration-color: $underline-color;
+    color: $underline-color;
   }
 }
 
@@ -3752,6 +3766,7 @@ $ui-header-logo-wordmark-width: 99px;
   &:hover {
     text-decoration: underline;
     text-decoration-color: $underline-color;
+    color: $underline-color;
   }
 
   &.compact {
@@ -4338,8 +4353,8 @@ a.status-card {
     &:focus,
     &:active {
       text-decoration: underline;
-      color: lighten($highlight-text-color, 4%);
       text-decoration-color: $underline-color;
+      color: $underline-color;
     }
   }
 
@@ -4632,9 +4647,9 @@ a.status-card {
 .column-header__setting-btn {
   &:hover,
   &:focus {
-    color: $darker-text-color;
     text-decoration: underline;
     text-decoration-color: $underline-color;
+    color: $underline-color;
   }
 }
 
@@ -4647,6 +4662,7 @@ a.status-card {
   font-weight: inherit;
   text-decoration: underline;
   text-decoration-color: $underline-color;
+  color: $underline-color;
 }
 
 .column-header__setting-arrows {
@@ -5099,6 +5115,7 @@ a.status-card {
     &:hover {
       text-decoration: underline;
       text-decoration-color: $underline-color;
+      color: $underline-color;
     }
   }
 }
@@ -5777,6 +5794,7 @@ a.status-card {
       &:focus {
         text-decoration: underline;
         text-decoration-color: $underline-color;
+        color: $underline-color;
       }
     }
   }
@@ -6559,6 +6577,7 @@ a.status-card {
       &:hover {
         text-decoration: underline;
         text-decoration-color: $underline-color;
+        color: $underline-color;
       }
     }
   }
@@ -7111,6 +7130,7 @@ a.status-card {
       &:hover {
         text-decoration: underline;
         text-decoration-color: $underline-color;
+        color: $underline-color;
       }
     }
   }
@@ -7636,6 +7656,7 @@ a.status-card {
       &:focus {
         text-decoration: underline;
         text-decoration-color: $underline-color;
+        color: $underline-color;
       }
     }
   }
@@ -7915,9 +7936,9 @@ noscript {
     max-width: 400px;
 
     a {
-      color: $highlight-text-color;
       text-decoration: underline;
       text-decoration-color: $underline-color;
+      color: $underline-color;
 
       &:hover {
         text-decoration: none;
@@ -8195,9 +8216,9 @@ noscript {
   }
 
   a {
-    color: inherit;
     text-decoration: underline;
     text-decoration-color: $underline-color;
+    color: $underline-color;
 
     &:hover {
       text-decoration: none;
@@ -8589,6 +8610,7 @@ noscript {
           span {
             text-decoration: underline;
             text-decoration-color: $underline-color;
+            color: $underline-color;
           }
         }
       }
@@ -8738,6 +8760,7 @@ noscript {
         &:active {
           text-decoration: underline;
           text-decoration-color: $underline-color;
+          color: $underline-color;
         }
       }
     }
@@ -9270,9 +9293,9 @@ noscript {
     }
 
     a {
-      color: inherit;
       text-decoration: underline;
       text-decoration-color: $underline-color;
+      color: $underline-color;
 
       &:hover,
       &:active,
@@ -9719,9 +9742,9 @@ noscript {
   }
 
   a {
-    color: $highlight-text-color;
     text-decoration: underline;
     text-decoration-color: $underline-color;
+    color: $underline-color;
 
     &:focus,
     &:hover,
@@ -9917,9 +9940,9 @@ noscript {
     }
 
     a {
-      color: $dark-text-color;
       text-decoration: underline;
       text-decoration-color: $underline-color;
+      color: $underline-color;
 
       &:hover,
       &:focus,
@@ -11026,9 +11049,9 @@ noscript {
     }
 
     a {
-      color: inherit;
       text-decoration: underline;
       text-decoration-color: $underline-color;
+      color: $underline-color;
 
       &:hover,
       &:focus,
@@ -11086,6 +11109,7 @@ noscript {
       &:active {
         text-decoration: underline;
         text-decoration-color: $underline-color;
+        color: $underline-color;
       }
     }
 
