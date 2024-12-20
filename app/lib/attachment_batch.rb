@@ -61,7 +61,7 @@ class AttachmentBatch
         styles.each do |style|
           case @storage_mode
           when :s3
-            logger.debug { "Adding #{attachment.path(style)} to batch for deletion" }
+            logger.info { "Adding #{attachment.path(style)} to batch for deletion" }
             keys << attachment.style_name_as_path(style)
           when :filesystem
             logger.debug { "Deleting #{attachment.path(style)}" }
@@ -110,7 +110,7 @@ class AttachmentBatch
 
     retries = 0
     keys.each_slice(LIMIT) do |keys_slice|
-      logger.debug { "Deleting #{keys_slice.size} objects" }
+      logger.info { "Deleting #{keys_slice.size} objects" }
 
       bucket.delete_objects(delete: {
         objects: keys_slice.map { |key| { key: key } },
