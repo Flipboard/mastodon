@@ -130,8 +130,9 @@ code {
       }
 
       label a {
-        color: $highlight-text-color;
+        color: $underline-color;
         text-decoration: underline;
+        text-decoration-color: $underline-color;
 
         &:hover,
         &:active,
@@ -714,8 +715,9 @@ code {
     text-decoration: none;
 
     &:hover {
-      color: $primary-text-color;
+      color: $underline-color;
       text-decoration: underline;
+      text-decoration-color: $underline-color;
     }
   }
 
@@ -723,6 +725,7 @@ code {
     font-weight: 700;
     color: inherit;
     text-decoration: underline;
+    text-decoration-color: $underline-color;
 
     &:hover,
     &:focus,
@@ -784,6 +787,7 @@ code {
 
     a {
       text-decoration: underline;
+      text-decoration-color: $underline-color;
     }
   }
 }
@@ -821,6 +825,7 @@ code {
 
     &:hover {
       text-decoration: underline;
+      text-decoration-color: $underline-color;
     }
   }
 }
@@ -953,6 +958,7 @@ code {
     a {
       color: $primary-text-color;
       text-decoration: underline;
+      text-decoration-color: $underline-color;
 
       &:hover,
       &:focus,

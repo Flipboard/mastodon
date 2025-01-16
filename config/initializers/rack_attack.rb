@@ -62,27 +62,31 @@ class Rack::Attack
     end
   end
 
+   Rack::Attack.safelist('allow from localhost and vpn') do |req|
+    req.remote_ip == '127.0.0.1' || req.remote_ip == '::1' || req.remote_ip == '172.30.140.247' || req.remote_ip == '172.30.226.198' || req.remote_ip == '172.30.158.168'
+   end
+
   Rack::Attack.blocklist('deny from blocklist') do |req|
     IpBlock.blocked?(req.remote_ip)
   end
 
-  throttle('throttle_authenticated_api', limit: 1_500, period: 5.minutes) do |req|
+  throttle('throttle_authenticated_api', limit: 150_000, period: 5.minutes) do |req|
     req.authenticated_user_id if req.api_request?
   end
 
-  throttle('throttle_per_token_api', limit: 300, period: 5.minutes) do |req|
+  throttle('throttle_per_token_api', limit: 30_000, period: 5.minutes) do |req|
     req.authenticated_token_id if req.api_request?
   end
 
-  throttle('throttle_unauthenticated_api', limit: 300, period: 5.minutes) do |req|
+  throttle('throttle_unauthenticated_api', limit: 30_000, period: 5.minutes) do |req|
     req.throttleable_remote_ip if req.api_request? && req.unauthenticated?
   end
 
-  throttle('throttle_api_media', limit: 30, period: 30.minutes) do |req|
+  throttle('throttle_api_media', limit: 3_000, period: 30.minutes) do |req|
     req.authenticated_user_id if req.post? && req.path.match?(%r{\A/api/v\d+/media\z}i)
   end
 
-  throttle('throttle_media_proxy', limit: 30, period: 10.minutes) do |req|
+  throttle('throttle_media_proxy', limit: 30_000, period: 10.minutes) do |req|
     req.throttleable_remote_ip if req.path.start_with?('/media_proxy')
   end
 
@@ -90,11 +94,11 @@ class Rack::Attack
     req.throttleable_remote_ip if req.post? && req.path == '/api/v1/accounts'
   end
 
-  throttle('throttle_authenticated_paging', limit: 300, period: 15.minutes) do |req|
+  throttle('throttle_authenticated_paging', limit: 30_000, period: 15.minutes) do |req|
     req.authenticated_user_id if req.paging_request?
   end
 
-  throttle('throttle_unauthenticated_paging', limit: 300, period: 15.minutes) do |req|
+  throttle('throttle_unauthenticated_paging', limit: 30_000, period: 15.minutes) do |req|
     req.throttleable_remote_ip if req.paging_request? && req.unauthenticated?
   end
 

@@ -963,7 +963,7 @@ DEPENDENCIES
   inline_svg
   irb (~> 1.8)
   json-ld
-  json-ld-preloaded (~> 3.2)
+  json-ld-preloaded (~> 3.3)
   json-schema (~> 5.0)
   kaminari (~> 1.2)
   kt-paperclip (~> 7.2)
