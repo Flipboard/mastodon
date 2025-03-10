@@ -95,7 +95,7 @@ gem 'webpacker', '~> 5.4'
 gem 'webpush', github: 'ClearlyClaire/webpush', ref: 'f14a4d52e201128b1b00245d11b6de80d6cfdcd9'
 
 gem 'json-ld'
-gem 'json-ld-preloaded', '~> 3.2'
+gem 'json-ld-preloaded', '~> 3.3'
 gem 'rdf-normalize', '~> 0.5'
 
 gem 'opentelemetry-api', '~> 1.4.0'
