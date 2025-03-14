@@ -57,9 +57,11 @@ si:
       email_status: වි-තැපෑලෙහි තත්වය
       enabled: සබල කර ඇත
       enabled_msg: "%{username}ගේ ගිණුම සාර්ථකව අත්හිටුවා ඇත"
+      flipboard_username: Flipboard පරිශීලක නාම
       followers: අනුගාමිකයින්
       header: ශීර්ෂය
       inbox_url: එන ලිපි URL
+      invite_request_flipboard_username: Flipboard පරිශීලක නාමය
       invite_request_text: එක්වීමට හේතුව
       invited_by: විසින් ආරාධනා කරන ලදී
       ip: අ.ජා.කෙ. (IP)
