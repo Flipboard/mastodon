@@ -75,10 +75,12 @@ lv:
       enable_sign_in_token_auth: Iespējot autentificēšanos ar e-pasta pilnvaru
       enabled: Iespējots
       enabled_msg: "%{username} konts sekmīgi atsaldēts"
+      flipboard_username: Flipboard lietotājvārds
       followers: Sekotāji
       follows: Seko
       header: Galvene
       inbox_url: Iesūtnes URL
+      invite_request_flipboard_username: Flipboard lietotājvārds
       invite_request_text: Pievienošanās iemesli
       invited_by: Uzaicināja
       ip: IP

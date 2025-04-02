@@ -74,9 +74,11 @@ eo:
       enabled: Ebligita
       enabled_msg: Sukcese malfrostigis konton de %{username}
       followers: Sekvoj
+      flipboard_username: Flipboard uzantnomo
       follows: Sekvatoj
       header: Kapa bildo
       inbox_url: Enira URL
+      invite_request_flipboard_username: Flipboard uzantnomo
       invite_request_text: Kialoj por aliĝi
       invited_by: Invitita de
       ip: IP

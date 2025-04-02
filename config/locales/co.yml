@@ -58,10 +58,12 @@ co:
       enable: Riattivà
       enabled: Attivatu
       enabled_msg: U contu di %{username} hè statu riattivatu
+      flipboard_username: Flipboard cugnome
       followers: Abbunati
       follows: Abbunamenti
       header: Ritrattu di cuprendula
       inbox_url: URL di l’inbox
+      invite_request_flipboard_username: Flipboard cugnome
       invite_request_text: Ragione di l'arregistramentu
       invited_by: Invitatu da
       ip: IP
