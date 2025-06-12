@@ -199,6 +199,17 @@ User-agent: Zerochat
 User-agent: Zhipu
 User-agent: Zimm
 User-agent: GPTBot
+User-agent: BLEXBot
+User-agent: CDSCbot
+User-agent: AhrefsBot
+User-agent: Googlebot
+User-agent: Twitterbot
+User-agent: SemrushBot
+User-agent: bingbot
+User-agent: RSS-Parrot-Bot
+User-agent: FediwayBot
+User-agent: fiperbot
+User-agent: DotBot
 Disallow: /
 
 User-agent: *
