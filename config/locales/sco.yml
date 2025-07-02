@@ -66,10 +66,12 @@ sco:
       enable: Unfreeze
       enabled: Turnt on
       enabled_msg: Successfully unfroze %{username}'s accoont
+      flipboard_username: Flipboard uisernemm
       followers: Follaers
       follows: Follaes
       header: Heider
       inbox_url: Inbox URL
+      invite_request_flipboard_username: Flipboard uisernemm
       invite_request_text: Raisons fir jynin
       invited_by: Invitit bi
       ip: IP

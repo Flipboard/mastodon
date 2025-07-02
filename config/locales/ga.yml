@@ -79,6 +79,7 @@ ga:
       enable_sign_in_token_auth: Cumasaigh fíordheimhniú comhartha ríomhphoist
       enabled: Ar chumas
       enabled_msg: D'éirigh le dí-reoite cuntas %{username}
+      flipboard_username: Flipboard ainm úsáideora
       followers: Leantóirí
       follows: Ag leanúint
       header: Ceanntásc
