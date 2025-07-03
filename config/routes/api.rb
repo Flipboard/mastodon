@@ -178,6 +178,20 @@ namespace :api, format: false do
       end
     end
 
+    namespace :surf do
+      resources :accounts, only: [:create], controller: :accounts
+
+      # users
+      post 'users/sign_in', to: 'users#sign_in'
+      post 'users/sign_out', to: 'users#sign_out'
+      get 'users/confirmation', to: 'users#confirmation'
+      get 'users/whoami', to: 'users#whoami'
+
+      # emails
+      get 'emails/confirmation', to: 'emails#confirmation'
+      get 'emails/welcome', to: 'emails#welcome'
+    end
+
     namespace :accounts do
       get :verify_credentials, to: 'credentials#show'
       patch :update_credentials, to: 'credentials#update'
