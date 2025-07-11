@@ -71,10 +71,12 @@ zh-CN:
       enable_sign_in_token_auth: 启用邮件令牌身份验证
       enabled: 已启用
       enabled_msg: 成功解冻 %{username} 的账号
+      flipboard_username: Flipboard 用户名
       followers: 粉丝
       follows: 关注
       header: 封面图
       inbox_url: 收件箱（Inbox）URL
+      invite_request_flipboard_username: Flipboard 用户名
       invite_request_text: 加入理由
       invited_by: 邀请者为
       ip: IP 地址

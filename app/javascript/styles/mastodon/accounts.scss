@@ -298,6 +298,8 @@
     &:focus,
     &:active {
       text-decoration: underline;
+      text-decoration-color: $underline-color;
+      color: $underline-color;
     }
   }
 
@@ -336,6 +338,8 @@
       &:active,
       &:focus {
         text-decoration: underline;
+        text-decoration-color: $underline-color;
+        color: $underline-color;
       }
     }
 
