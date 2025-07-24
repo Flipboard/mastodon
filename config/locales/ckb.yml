@@ -66,9 +66,11 @@ ckb:
       enable: چالاک کردن
       enabled: چالاککراوە
       enabled_msg: هەژمارە %{username} بە سەرکەوتوویی سنووردار کرا
+      flipboard_username: Flipboard ﻥﺍﻭﯼ ﺏەﮎﺍﺮﻫێﻥەﺭ
       followers: شوێنکەوتوان
       follows: شوێنکەوتوان
       header: سەرپەڕە
+      invite_request_flipboard_username: Flipboard ﻥﺍﻮﯾ ﺏەﮎﺍﺮﻫێﻥەﺭ
       inbox_url: نیشانی هاتنەژوور
       invite_request_text: هۆکارەکانی بەشداریکردن
       invited_by: بانگهێشتکراو لە لایەن
