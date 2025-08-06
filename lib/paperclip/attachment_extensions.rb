@@ -81,6 +81,17 @@ module Paperclip
     # to respond or don't respond at all and as such minimize the
     # impact of object storage outages on application throughput
     def save
+      if @queued_for_delete.any?
+        @queued_for_delete.reject! do |path|
+          if path.include?('preview_card')
+            log("Preserving preview card image: #{path}")
+            true
+          else
+            false
+          end
+        end
+      end
+
       # Don't go through Stoplight if we don't have anything object-storage-oriented to do
       return super if @queued_for_delete.empty? && @queued_for_write.empty? && !dirty?
 
@@ -90,6 +101,17 @@ module Paperclip
         .with_error_handler { |error, handle| error.is_a?(Seahorse::Client::NetworkingError) ? handle.call(error) : raise(error) }
         .run { super }
     end
+
+    # Optionally, override the destroy method if necessary
+#    def destroy
+#      # Prevent deletion of specific files when the attachment is destroyed
+#      @queued_for_delete.reject! do |path|
+#        path.include?('preview_card') # Adjust the condition as needed
+#      end
+#
+#      super
+#    end
+
   end
 end
 

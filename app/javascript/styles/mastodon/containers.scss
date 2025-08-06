@@ -155,6 +155,8 @@
       &:hover,
       &:focus,
       &:active {
+        color: $underline-color;
+        text-decoration-color: $underline-color;
         text-decoration: underline;
       }
     }
