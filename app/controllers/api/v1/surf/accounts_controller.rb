@@ -3,7 +3,6 @@
 class Api::V1::Surf::AccountsController < Api::BaseController
   before_action -> { doorkeeper_authorize! :write, :'write:accounts' }, only: [:create]
   before_action :check_enabled_registrations, only: [:create]
-
   skip_before_action :require_authenticated_user!, only: :create
 
   def create
@@ -24,7 +23,11 @@ class Api::V1::Surf::AccountsController < Api::BaseController
   end
 
   def check_enabled_registrations
-    forbidden if single_user_mode? || omniauth_only? || !allowed_registrations?
+    # Skip this check for now...
+    # forbidden if single_user_mode? || omniauth_only? || !allowed_registrations?
+    # Instead check if the client is a surf client
+    surf_client_id = request.headers['X-Surf-Client-Id']
+    forbidden unless surf_client_id.present? && surf_client_id == "FLDailyMastodon"
   end
 
   def allowed_registrations?

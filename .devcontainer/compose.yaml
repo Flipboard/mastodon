@@ -44,8 +44,11 @@ services:
       POSTGRES_DB: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - '5432:5432'
     networks:
       - internal_network
+      - external_network
 
   redis:
     image: redis:7-alpine

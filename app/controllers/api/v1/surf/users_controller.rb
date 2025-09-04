@@ -1,16 +1,9 @@
 # frozen_string_literal: true
 
 class Api::V1::Surf::UsersController < Api::BaseController
-  before_action -> { doorkeeper_authorize! :write }, only: [:sign_in, :sign_out, :confirmation]
+  before_action -> { doorkeeper_authorize! :write }, only: [:sign_in, :sign_out]
   before_action -> { doorkeeper_authorize! :read }
-  before_action :require_user!, except: [:confirmation, :sign_in]
-
-  def whoami
-    # Requires: user access_token
-    user = @current_user.as_json
-    user[:confirmation_token] = @current_user.confirmation_token unless @current_user.confirmed?
-    render json: user
-  end
+  before_action :require_user!, except: [:sign_in]
 
   def sign_in
     # Requires: app access_token
@@ -49,24 +42,6 @@ class Api::V1::Surf::UsersController < Api::BaseController
     # Requires: user access_token
     revoke_access!
     render json: { message: 'All access tokens revoked.' }, status: 200
-  end
-
-  def confirmation
-    # Requires: app access_token
-    # Requires: confirmation_token
-    confirmation_token = params[:confirmation_token]
-    raise Mastodon::InvalidParameterError, 'Missing confirmation_token' unless confirmation_token
-
-    @current_user = User.find_first_by_auth_conditions(confirmation_token: confirmation_token)
-    raise(ActiveRecord::RecordNotFound) unless @current_user
-
-    # update confirmed_at, reset confirmation_token
-    @current_user.update!(
-      confirmed_at: Time.current,
-      confirmation_token: nil
-    )
-    prepare_new_user!
-    render json: { message: 'User confirmed.' }, status: 200
   end
 
   protected
