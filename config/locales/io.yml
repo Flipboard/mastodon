@@ -73,10 +73,12 @@ io:
       enable_sign_in_token_auth: Ebligar retpostofichyurizo
       enabled: Ebligita
       enabled_msg: Sucesoze desfrostigas konto di %{username}
+      flipboard_username: Flipboard uzantonomo
       followers: Uzanti
       follows: Uzati
       header: Fundimajo
       inbox_url: URL di mesajbuxo
+      invite_request_flipboard_username: Flipboard uzantonomo
       invite_request_text: Adeskmotivi
       invited_by: Invitesis da
       ip: IP

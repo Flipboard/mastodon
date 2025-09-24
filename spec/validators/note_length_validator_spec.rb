@@ -7,7 +7,7 @@ RSpec.describe NoteLengthValidator do
 
   describe '#validate' do
     it 'adds an error when text is over configured character limit' do
-      text = 'a' * 520
+      text = 'a' * 5020
       account = instance_double(Account, note: text, errors: activemodel_errors)
 
       subject.validate_each(account, 'note', text)
@@ -49,7 +49,7 @@ RSpec.describe NoteLengthValidator do
     private
 
     def starting_string
-      'a' * 476
+      'a' * 4976
     end
 
     def example_link
