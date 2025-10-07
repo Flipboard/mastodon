@@ -110,7 +110,6 @@ module Paperclip
     #    end
     #    super
     #  end
-
   end
 end
 

@@ -27,14 +27,14 @@ class Api::V1::Surf::AccountsController < Api::BaseController
     # forbidden if single_user_mode? || omniauth_only? || !allowed_registrations?
     # Instead check if registrations are enabled
     registrations_enabled = Rails.configuration.x.surf[:registrations_enabled]
-    logger.info 'Surf Registrations Disabled. Returning Forbidden.' unless registrations_enabled
+    logger.info 'Surf Registrations Disabled. Returning Forbidden' unless registrations_enabled
     return forbidden unless registrations_enabled
     
     # Now chheck if the X-Surf-Registration-Token is present and valid
     registration_token = request.headers['X-Surf-Registration-Token']
     expected_token = Rails.configuration.x.surf[:registration_token]
     valid_token = registration_token.present? && expected_token.present? && registration_token == expected_token
-    logger.info 'Surf Registration Token Invalid. Returning Forbidden.' unless valid_token
+    logger.info 'Surf Registration Token Invalid. Returning Forbidden' unless valid_token
     forbidden unless valid_token
   end
 

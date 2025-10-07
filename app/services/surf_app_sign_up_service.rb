@@ -38,4 +38,3 @@ class SurfAppSignUpService < AppSignUpService
     @user.approve!
   end
 end
-
