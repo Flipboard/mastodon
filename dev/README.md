@@ -1,23 +1,35 @@
 # Developer Setup w/ Docker
 
 - Install docker/docker-compose
-- Edit `/etc/hosts` and add `127.0.0.1 mastodon.local`
 
 # Running Apps
 
-From the root of the repo run this the first time:
+Just use the default LOCAL_DOMAIN of `localhost:3000` for testing.
 
-- `docker-compose -f dev/docker-compose.yml up --build`
+Before running the commands, you'll need to set the following environment variables if you want to test surf registrations:
 
-Or, if restarting:
+- `SURF_REGISTRATIONS_ENABLED` - Whether surf registrations are enabled
+- `SURF_REGISTRATION_TOKEN` - The registration token for the surf application. Doesn't matter for test environments but has to match when running the create-surf-user.sh script.
 
-- `docker-compose -f dev/docker-compose.yml up`
+```
+export SURF_REGISTRATIONS_ENABLED=true
+export SURF_REGISTRATION_TOKEN=<SURF_REGISTRATION_TOKEN>
+```
 
-The app takes a while to start. Patience, my friend.
+From the root of the repo run this commands to start the app:
+
+- `docker compose -f .devcontainer/compose.yaml up`
+
+Now open another terminal and run these commands:
+
+- `docker compose -f .devcontainer/compose.yaml exec app bin/setup`
+- `docker compose -f .devcontainer/compose.yaml exec app bin/dev`
+
+And you'll need to stop the first terminal with `Ctrl+C` if you want to start over.
 
 ## Hosts
 
-The developer setup doesn't configure SSL and uses nginx as a reverse proxy (see: mastodon.local.conf).
+The developer setup doesn't configure SSL.
 
 - App:
 
@@ -41,23 +53,34 @@ The developer setup doesn't configure SSL and uses nginx as a reverse proxy (see
 
 # Cleaning Dev Setup
 
-- `docker-compose -f dev/docker-compose.yml down`
-
-This is helpful if we're making changes to how the docker-compose stuff runs and we want to start fresh:
-
-- `./dev/clean.sh`
+- `docker compose -f .devcontainer/compose.yaml down`
 
 # OAuth Client Testing
 
-Create an oauth application and use it to test creating users or calling the api's:
+Create an oauth application and use it to test creating users or calling the api's.
+
+Before running the scripts, you'll need to set the following environment variables:
+
+- `SURF_REGISTRATION_TOKEN` - The registration token for the surf application
+
+```
+export SURF_REGISTRATION_TOKEN=<SURF_REGISTRATION_TOKEN>
+```
+
+Take a look at these files to ensure the api_host is set correctly for the environment you're testing:
 
 ```
 ./dev/oauth/create-client.sh
 ./dev/oauth/create-surf-user.sh
 ```
 
-Once you cache the client and or users...
+## Linting/Formatting
+
+With the devcontainer docker compose file running, you can run the following commands to lint/format the code:
 
 ```
-./dev/debug/emails.sh
+docker compose -f .devcontainer/compose.yaml exec app yarn format:check
+docker compose -f .devcontainer/compose.yaml exec app yarn format
+docker compose -f .devcontainer/compose.yaml exec app yarn format:check
+docker compose -f .devcontainer/compose.yaml exec app yarn fix
 ```

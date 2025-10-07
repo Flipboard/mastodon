@@ -16,7 +16,7 @@ class SurfAppSignUpService < AppSignUpService
 
   private
 
-  ## The surf social mastodon account creation 
+  ## The surf social mastodon account creation
   # should be immediately confirmed without email confirmation
   def create_user!
     @user = User.new(
@@ -28,7 +28,7 @@ class SurfAppSignUpService < AppSignUpService
         invite_request_attributes: invite_request_params,
         confirmed_at: Time.current,
         confirmation_token: nil,
-        approved: true,
+        approved: true
       )
     )
 
@@ -38,4 +38,3 @@ class SurfAppSignUpService < AppSignUpService
     @user.approve!
   end
 end
-

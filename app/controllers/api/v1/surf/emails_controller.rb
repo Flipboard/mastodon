@@ -25,4 +25,3 @@ class Api::V1::Surf::EmailsController < Api::BaseController
     }
   end
 end
-

@@ -155,9 +155,9 @@
       &:hover,
       &:focus,
       &:active {
+        text-decoration: underline;
         color: $underline-color;
         text-decoration-color: $underline-color;
-        text-decoration: underline;
       }
     }
   }

@@ -41,7 +41,7 @@ class Api::V1::Surf::UsersController < Api::BaseController
   def sign_out
     # Requires: user access_token
     revoke_access!
-    render json: { message: 'All access tokens revoked.' }, status: 200
+    render json: { message: 'All access tokens revoked' }, status: 200
   end
 
   protected
@@ -49,7 +49,7 @@ class Api::V1::Surf::UsersController < Api::BaseController
   def revoke_access!
     # this method revokes all tokens for the current user
     Doorkeeper::AccessToken.by_resource_owner(@current_user).in_batches do |batch|
-      batch.update_all(revoked_at: Time.now.utc) # rubocop:disable Rails/SkipsModelValidations
+      batch.update_all(revoked_at: Time.now.utc)
     end
   end
 
@@ -75,4 +75,3 @@ class Api::V1::Surf::UsersController < Api::BaseController
     ActivityTracker.record('activity:logins', @current_user.id)
   end
 end
-

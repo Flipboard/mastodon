@@ -4643,9 +4643,9 @@ a.status-card {
 .column-header__setting-btn {
   &:hover,
   &:focus {
+    text-decoration: underline;
     text-decoration-color: $underline-color;
     color: $underline-color;
-    text-decoration: underline;
   }
 }
 
@@ -8105,7 +8105,6 @@ noscript {
   }
 
   a {
-    color: inherit;
     text-decoration: underline;
     text-decoration-color: $underline-color;
     color: $underline-color;
@@ -9234,7 +9233,6 @@ noscript {
     }
 
     a {
-      color: inherit;
       text-decoration: underline;
       text-decoration-color: $underline-color;
       color: $underline-color;

@@ -23,7 +23,7 @@ $classic-highlight-color: $flipboard-500;
 $aqua-light: #0bf9ea; // Bright Aqua
 $aqua-dark: #249d9f; // Dark Aqua
 
-$underline-color: $aqua-light; 
+$underline-color: $aqua-light;
 
 @use '../mastodon/variables' with (
   $success-green: color.adjust(
