@@ -41,7 +41,7 @@ class Api::V1::Surf::UsersController < Api::BaseController
   def sign_out
     # Requires: user access_token
     revoke_access!
-    render json: { message: 'All access tokens revoked.' }, status: 200
+    render json: { message: 'All access tokens revoked' }, status: 200
   end
 
   protected

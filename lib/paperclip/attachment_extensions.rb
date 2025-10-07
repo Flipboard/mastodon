@@ -102,15 +102,14 @@ module Paperclip
         .run { super }
     end
 
-    # Optionally, override the destroy method if necessary
-#    def destroy
-#      # Prevent deletion of specific files when the attachment is destroyed
-#      @queued_for_delete.reject! do |path|
-#        path.include?('preview_card') # Adjust the condition as needed
-#      end
-#
-#      super
-#    end
+    #  # Optionally, override the destroy method if necessary
+    #  def destroy
+    #    # Prevent deletion of specific files when the attachment is destroyed
+    #    @queued_for_delete.reject! do |path|
+    #      path.include?('preview_card') # Adjust the condition as needed
+    #    end
+    #    super
+    #  end
 
   end
 end
