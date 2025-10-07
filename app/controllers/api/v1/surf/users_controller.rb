@@ -49,7 +49,7 @@ class Api::V1::Surf::UsersController < Api::BaseController
   def revoke_access!
     # this method revokes all tokens for the current user
     Doorkeeper::AccessToken.by_resource_owner(@current_user).in_batches do |batch|
-      batch.update_all(revoked_at: Time.now.utc) # rubocop:disable Rails/SkipsModelValidations
+      batch.update_all(revoked_at: Time.now.utc)
     end
   end
 
