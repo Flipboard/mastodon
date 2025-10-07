@@ -5298,4 +5298,3 @@ test:
 
 production:
   <<: *defaults
-

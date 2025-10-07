@@ -74,3 +74,13 @@ Take a look at these files to ensure the api_host is set correctly for the envir
 ./dev/oauth/create-surf-user.sh
 ```
 
+## Linting/Formatting
+
+With the devcontainer docker compose file running, you can run the following commands to lint/format the code:
+
+```
+docker compose -f .devcontainer/compose.yaml exec app yarn format:check
+docker compose -f .devcontainer/compose.yaml exec app yarn format
+docker compose -f .devcontainer/compose.yaml exec app yarn format:check
+docker compose -f .devcontainer/compose.yaml exec app yarn fix
+```
