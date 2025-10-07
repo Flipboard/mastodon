@@ -29,7 +29,7 @@ class Api::V1::Surf::AccountsController < Api::BaseController
     registrations_enabled = Rails.configuration.x.surf[:registrations_enabled]
     logger.info 'Surf Registrations Disabled. Returning Forbidden' unless registrations_enabled
     return forbidden unless registrations_enabled
-    
+
     # Now chheck if the X-Surf-Registration-Token is present and valid
     registration_token = request.headers['X-Surf-Registration-Token']
     expected_token = Rails.configuration.x.surf[:registration_token]

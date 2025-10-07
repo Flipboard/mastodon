@@ -75,4 +75,3 @@ class Api::V1::Surf::UsersController < Api::BaseController
     ActivityTracker.record('activity:logins', @current_user.id)
   end
 end
-
