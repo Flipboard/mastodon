@@ -30,7 +30,6 @@ sudo cp -r "${SRC_DIR}"/live "${TARGET_DIR}"
 
 # get pool for s3 configs
 mypool="$(grep ec2.pool /ebsa/config/services.config | cut -d '=' -f 2 | head -1)"
-mycluster="$(grep ec2.cluster /ebsa/config/services.config | cut -d '=' -f 2 | head -1)"
 
 # copy over important configs
 local_domain="$(grep mastodon.local_domain /ebsa/config/services.config | cut -d '=' -f 2 | head -1)"
@@ -105,13 +104,11 @@ echo "S3_REGION=us-east-1" >> /tmp/env.production
 echo "S3_PROTOCOL=https" >> /tmp/env.production
 echo "S3_HOSTNAME=s3-us-east-1.amazonaws.com" >> /tmp/env.production
 if [[ "${mypool}" == "production" ]] ; then
-  if [[ "${mycluster}" == "surf" ]] ; then
-    echo "S3_BUCKET=m-cdn.surf.social" >> /tmp/env.production
-    echo "S3_ALIAS_HOST=m-cdn.surf.social" >> /tmp/env.production
-  else
-    echo "S3_BUCKET=m-cdn.flipboard.social" >> /tmp/env.production
-    echo "S3_ALIAS_HOST=m-cdn.flipboard.social" >> /tmp/env.production
-  fi
+  echo "S3_BUCKET=m-cdn.flipboard.social" >> /tmp/env.production
+  echo "S3_ALIAS_HOST=m-cdn.flipboard.social" >> /tmp/env.production
+elif [[ "${mypool}" == "staging" ]] ; then
+  echo "S3_BUCKET=m-cdn.surf.social" >> /tmp/env.production
+  echo "S3_ALIAS_HOST=m-cdn.surf.social" >> /tmp/env.production
 elif [[ "${mypool}" == "beta" ]] ; then
   echo "S3_BUCKET=social-beta-cdn.gumby.social" >> /tmp/env.production
   echo "S3_ALIAS_HOST=social-beta-cdn.gumby.social" >> /tmp/env.production
@@ -128,6 +125,10 @@ if [[ "${mypool}" == "production" ]] ; then
   echo "ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY=7LdpxxRk6U0aa1vGI7LvGRomD6KvVxfB" >> /tmp/env.production
   echo "ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT=BB63msnlzgbbYk2pVDOXOhuAjvf0L1Lw" >> /tmp/env.production
   echo "ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY=HebPlwfpL5KJjZIlwpWr6xptL5eXfhrR" >> /tmp/env.production
+elif [[ "${mypool}" == "staging" ]] ; then
+  echo "ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY=LP1Z5GeCrwZ1Q0hR9fWMbdYasm65QpfW" >> /tmp/env.production
+  echo "ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT=LsILEDcCPu74Yld55uSYoPpTII4UJTY7" >> /tmp/env.production
+  echo "ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY=XVLeQ3OpSTkrphXF9P2m0k8tJBBTz6fm" >> /tmp/env.production
 elif [[ "${mypool}" == "beta" ]] ; then
   echo "ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY=LP1Z5GeCrwZ1Q0hR9fWMbdYasm65QpfW" >> /tmp/env.production
   echo "ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT=LsILEDcCPu74Yld55uSYoPpTII4UJTY7" >> /tmp/env.production
