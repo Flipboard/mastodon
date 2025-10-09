@@ -1,50 +1,76 @@
 #!/usr/bin/env bash
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+#########################################################
+# This script creates a new user and requires running create-client.sh first
+# to create an app access token.
 
+# Run this script as is and if you want to test specific scenarios,
+# keep in mind the email address using a timestamp to it might be hard to login
+# if you only want to test the login functionality. You'll need to change the email address.
+
+# To run the script:
+# ./create-surf-user.sh
+#########################################################
+set -ex
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+TIME=`date +%s`
+
+api_host="http://localhost:3000"
+# api_host="http://mastodon.local:3000"
+# api_host="https://gumby.social"
 app_client_token=$SCRIPT_DIR/oauth-client-token.json
 user_token=$SCRIPT_DIR/oauth-user-token.json
 user=$SCRIPT_DIR/oauth-user.json
+user_email="test-$TIME@gumby.social"
 
 USER_PASSWORD="ZXCzxcASDasdQWEqwe"
 
-echo "Creating new user..."
+## read app access token from file
 APP_ACCESS_TOKEN=`jq -r '.access_token' $app_client_token`
 
-TIME=`date +%s`
-curl -s -X POST http://mastodon.local/api/v1/surf/accounts \
+## create a new user... X-Surf-Client-Id is required and must be FLDailyMastodon
+## to pass the check_enabled_registrations check
+echo "Creating new user..."
+
+## check if the SURF_REGISTRATION_TOKEN is set
+if [ -z "$SURF_REGISTRATION_TOKEN" ]; then
+  echo "SURF_REGISTRATION_TOKEN is not set"
+  exit 1
+fi
+
+curl -s -X POST $api_host/api/v1/surf/accounts \
   -H 'Content-Type: application/json' \
   -H "Authorization: Bearer $APP_ACCESS_TOKEN" \
-  -d "{\"username\": \"test_$TIME\", \"email\": \"test-$TIME@mastodon.local\", \"password\": \"$USER_PASSWORD\", \"agreement\": true, \"locale\": \"en\"}" > $user_token
+  -H "X-Surf-Registration-Token: $SURF_REGISTRATION_TOKEN" \
+  -d "{\"username\": \"test_$TIME\", \"email\": \"$user_email\", \"password\": \"$USER_PASSWORD\", \"agreement\": true, \"locale\": \"en\"}" -L > $user_token
 
 echo "Reading $user_token"
 cat $user_token | jq .
 
-# get user access token
+## read user access token from file
 USER_ACCESS_TOKEN=`jq -r '.access_token' $user_token`
 
-echo "Get user details..."
-curl -s -X GET "http://mastodon.local/api/v1/surf/users/whoami" -H "Authorization: Bearer $USER_ACCESS_TOKEN" > $user
+echo "Verify user credentials..."
+curl -s -X GET "$api_host/api/v1/accounts/verify_credentials" -H "Authorization: Bearer $USER_ACCESS_TOKEN" -L | jq . > $user
 cat $user | jq .
 
-echo "Confirm new user..."
-CONFIRMATION_TOKEN=`jq -r '.confirmation_token' $user`
-curl -s -X GET "http://mastodon.local/api/v1/surf/users/confirmation?confirmation_token=$CONFIRMATION_TOKEN" \
-  -H "Authorization: Bearer $APP_ACCESS_TOKEN" | jq .
-
-echo "Verify user credentials..."
-curl -s -X GET "http://mastodon.local/api/v1/accounts/verify_credentials" -H "Authorization: Bearer $USER_ACCESS_TOKEN" | jq .
-
 echo "Sign out user..."
-curl -s -X POST "http://mastodon.local/api/v1/surf/users/sign_out" \
+curl -s -X POST "$api_host/api/v1/surf/users/sign_out" \
   -H 'Content-Type: application/json' \
-  -H "Authorization: Bearer $USER_ACCESS_TOKEN" | jq .
+  -H "Authorization: Bearer $USER_ACCESS_TOKEN" -L| jq .
 
 echo "Verify account credentials..."
-curl -s -X GET "http://mastodon.local/api/v1/accounts/verify_credentials" -H "Authorization: Bearer $USER_ACCESS_TOKEN" | jq .
+curl -s -X GET "$api_host/api/v1/accounts/verify_credentials" -H "Authorization: Bearer $USER_ACCESS_TOKEN" -L | jq . > $user
+cat $user | jq .
 
 echo "Sign in user..."
-curl -s -X POST "http://mastodon.local/api/v1/surf/users/sign_in" \
+curl -s -X POST "$api_host/api/v1/surf/users/sign_in" \
   -H 'Content-Type: application/json' \
   -H "Authorization: Bearer $APP_ACCESS_TOKEN" \
-  -d "{\"email\": \"test-$TIME@mastodon.local\", \"password\": \"$USER_PASSWORD\"}"  > $user_token
+  -d "{\"email\": \"$user_email\", \"password\": \"$USER_PASSWORD\"}" -L > $user_token
 cat $user_token | jq .
+
+## read user access token from file
+USER_ACCESS_TOKEN=`jq -r '.access_token' $user_token`
+echo "Verify account credentials..."
+curl -s -X GET "$api_host/api/v1/accounts/verify_credentials" -H "Authorization: Bearer $USER_ACCESS_TOKEN" -L | jq . > $user
+cat $user | jq .

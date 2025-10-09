@@ -63,7 +63,7 @@ class Rack::Attack
   end
 
   Rack::Attack.safelist('allow from localhost and vpn') do |req|
-    req.remote_ip == '127.0.0.1' || req.remote_ip == '::1' || req.remote_ip == '172.30.140.247' || req.remote_ip == '172.30.226.198' || req.remote_ip == '172.30.158.168'
+    ['127.0.0.1', '::1', '172.30.140.247', '172.30.226.198', '172.30.158.168'].include?(req.remote_ip)
   end
 
   Rack::Attack.blocklist('deny from blocklist') do |req|
