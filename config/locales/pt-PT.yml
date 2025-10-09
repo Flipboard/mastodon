@@ -580,6 +580,13 @@ pt-PT:
         all: Todas
         limited: Limitadas
         title: Moderação
+      moderation_notes:
+        create: Adicionar Nota de Moderação
+        created_msg: Nota de moderação da instância criada com sucesso!
+        description_html: Ver e deixar notas para outros moderadores e para referência futura
+        destroyed_msg: Nota de moderação da instância eliminada com sucesso!
+        placeholder: Informações sobre esta instância, ações tomadas ou qualquer outra informação que o ajude na moderação desta instância no futuro.
+        title: Notas de Moderação
       private_comment: Comentário privado
       public_comment: Comentário público
       purge: Purgar
@@ -1870,8 +1877,6 @@ pt-PT:
       ownership: Não podem ser fixadas publicações de outras pessoas
       reblog: Não é possível fixar um impulso
     quote_policies:
-      followers: Seguidores e utilizadores mencionados
-      nobody: Apenas utilizadores mencionados
       public: Todos
     title: '%{name}: "%{quote}"'
     visibilities:

@@ -8,4 +8,3 @@ class AddFlipboardUsernameToUserInviteRequests < ActiveRecord::Migration[6.1]
     add_index :user_invite_requests, :flipboard_username, algorithm: :concurrently
   end
 end
-

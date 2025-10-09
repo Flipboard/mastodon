@@ -251,14 +251,13 @@ export default tseslint.config([
           devDependencies: [
             'eslint.config.mjs',
             'app/javascript/mastodon/performance.js',
-            'app/javascript/mastodon/test_setup.js',
-            'app/javascript/mastodon/test_helpers.tsx',
+            'app/javascript/testing/**/*',
             'app/javascript/**/__tests__/**',
             'app/javascript/**/*.stories.ts',
             'app/javascript/**/*.stories.tsx',
             'app/javascript/**/*.test.ts',
             'app/javascript/**/*.test.tsx',
-            '.storybook/**/*.ts',
+            '.storybook/**/*',
           ],
         },
       ],
@@ -351,6 +350,8 @@ export default tseslint.config([
       'import/no-default-export': 'warn',
 
       'jsdoc/require-jsdoc': 'off',
+      'jsdoc/require-param': 'off',
+      'jsdoc/require-returns': 'off',
 
       'react/prefer-stateless-function': 'warn',
       'react/function-component-definition': [
@@ -406,7 +407,7 @@ export default tseslint.config([
     },
   },
   {
-    files: ['**/*.stories.ts', '**/*.stories.tsx', '.storybook/**/*.ts'],
+    files: ['**/*.stories.ts', '**/*.stories.tsx', '.storybook/*'],
     rules: {
       'import/no-default-export': 'off',
     },

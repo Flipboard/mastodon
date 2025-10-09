@@ -6,8 +6,6 @@ class SurfAppSignUpService < AppSignUpService
     @remote_ip = remote_ip
     @params    = params
 
-    raise Mastodon::NotPermittedError unless allowed_registrations?
-
     ApplicationRecord.transaction do
       create_user!
       create_access_token!
@@ -18,6 +16,8 @@ class SurfAppSignUpService < AppSignUpService
 
   private
 
+  ## The surf social mastodon account creation
+  # should be immediately confirmed without email confirmation
   def create_user!
     @user = User.new(
       user_params.merge(
@@ -25,12 +25,16 @@ class SurfAppSignUpService < AppSignUpService
         sign_up_ip: @remote_ip,
         password_confirmation: user_params[:password],
         account_attributes: account_params,
-        invite_request_attributes: invite_request_params
+        invite_request_attributes: invite_request_params,
+        confirmed_at: Time.current,
+        confirmation_token: nil,
+        approved: true
       )
     )
+
     # disable sending confirmation email
     @user.skip_confirmation_notification!
     @user.save!
+    @user.approve!
   end
 end
-

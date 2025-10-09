@@ -578,6 +578,13 @@ fi:
         all: Kaikki
         limited: Rajoitettu
         title: Moderointi
+      moderation_notes:
+        create: Lisää moderointimuistiinpano
+        created_msg: Instanssin moderointimuistiinpanon luonti onnistui!
+        description_html: Tarkastele ja jätä muistiinpanoja muille moderaattoreille ja itsellesi tulevaisuuteen
+        destroyed_msg: Instanssin moderointimuistiinpano poistettu!
+        placeholder: Tietoa tästä instanssista, tehdyistä toimista tai muusta sellaisesta, joka auttaa moderoimaan tätä instanssia tulevaisuudessa.
+        title: Moderointimuistiinpanot
       private_comment: Yksityinen kommentti
       public_comment: Julkinen kommentti
       purge: Tyhjennä
@@ -1868,8 +1875,8 @@ fi:
       ownership: Muiden julkaisuja ei voi kiinnittää
       reblog: Tehostusta ei voi kiinnittää
     quote_policies:
-      followers: Seuraajat ja mainitut käyttäjät
-      nobody: Vain mainitut käyttäjät
+      followers: Vain seuraajasi
+      nobody: Ei kukaan
       public: Kaikki
     title: "%{name}: ”%{quote}”"
     visibilities:

@@ -580,6 +580,13 @@ it:
         all: Tutto
         limited: Limitato
         title: Moderazione
+      moderation_notes:
+        create: Aggiungi Nota di Moderazione
+        created_msg: Nota di moderazione dell'istanza creata con successo!
+        description_html: Visualizza e lascia note per altri moderatori e per il futuro te
+        destroyed_msg: Nota di moderazione dell'istanza eliminata con successo!
+        placeholder: Informazioni su questa istanza, azioni compiute, o qualsiasi cosa possa aiutarti a moderare questa istanza in futuro.
+        title: Note di Moderazione
       private_comment: Commento privato
       public_comment: Commento pubblico
       purge: Ripulisci
@@ -1872,8 +1879,8 @@ it:
       ownership: Non puoi fissare in cima un post di qualcun altro
       reblog: Un toot condiviso non può essere fissato in cima
     quote_policies:
-      followers: Seguaci e utenti menzionati
-      nobody: Solo gli utenti menzionati
+      followers: Solo i tuoi seguaci
+      nobody: Nessuno
       public: Tutti
     title: '%{name}: "%{quote}"'
     visibilities:
