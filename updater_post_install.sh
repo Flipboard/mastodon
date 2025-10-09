@@ -109,9 +109,11 @@ if [[ "${mypool}" == "production" ]] ; then
 elif [[ "${mypool}" == "staging" ]] ; then
   echo "S3_BUCKET=m-cdn.surf.social" >> /tmp/env.production
   echo "S3_ALIAS_HOST=m-cdn.surf.social" >> /tmp/env.production
+  echo "SMTP_DELIVERY_METHOD=logger" >> /tmp/env.production
 elif [[ "${mypool}" == "beta" ]] ; then
   echo "S3_BUCKET=social-beta-cdn.gumby.social" >> /tmp/env.production
   echo "S3_ALIAS_HOST=social-beta-cdn.gumby.social" >> /tmp/env.production
+  echo "SMTP_DELIVERY_METHOD=logger" >> /tmp/env.production
 else
   echo "S3_BUCKET=social-cdn.flipboard.com" >> /tmp/env.production
   echo "S3_ALIAS_HOST=social-cdn.flipboard.com" >> /tmp/env.production
