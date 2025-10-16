@@ -11,9 +11,10 @@ set -ex
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 api_host="http://localhost:3000"
-# api_host="http://mastodon.local:3000"
 # api_host="https://gumby.social"
-client_name="Test FLDailyMastodon Client"
+# api_host="https://surf.social"
+
+client_name="Surf Social FLDailyMastodon Client"
 
 app_client=$SCRIPT_DIR/oauth-client.json
 app_client_token=$SCRIPT_DIR/oauth-client-token.json
