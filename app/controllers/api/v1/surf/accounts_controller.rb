@@ -21,8 +21,9 @@ class Api::V1::Surf::AccountsController < Api::BaseController
   def destroy
     account = Account.find_by(id: params[:id])
     logger.info "Deleting account: #{account.inspect}"
-    raise ActiveRecord::RecordNotFound unless account.present?
+    raise ActiveRecord::RecordNotFound if account.blank?
     raise Mastodon::NotPermittedError unless account.local?
+
     DeleteAccountService.new.call(account, reserve_email: false, reserve_username: false, skip_side_effects: false)
     render json: { message: 'Account deleted' }, status: 200
   end
@@ -31,8 +32,9 @@ class Api::V1::Surf::AccountsController < Api::BaseController
   def change_password
     account = Account.find_by(id: params[:id])
     logger.info "Changing password for account: #{account.inspect}"
-    raise ActiveRecord::RecordNotFound unless account.present?
+    raise ActiveRecord::RecordNotFound if account.blank?
     raise Mastodon::NotPermittedError unless account.local?
+
     account.user.update!(password: params[:password], password_confirmation: params[:password])
     render json: { message: 'Password changed' }, status: 200
   end
