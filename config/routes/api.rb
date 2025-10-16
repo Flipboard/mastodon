@@ -179,17 +179,14 @@ namespace :api, format: false do
     end
 
     namespace :surf do
-      resources :accounts, only: [:create], controller: :accounts
+      # accounts
+      resources :accounts, only: [:create, :destroy], controller: :accounts
+      post 'accounts/:id/change_password', to: 'accounts#change_password'
 
       # users
       post 'users/sign_in', to: 'users#sign_in'
       post 'users/sign_out', to: 'users#sign_out'
       get 'users/confirmation', to: 'users#confirmation'
-      get 'users/whoami', to: 'users#whoami'
-
-      # emails
-      get 'emails/confirmation', to: 'emails#confirmation'
-      get 'emails/welcome', to: 'emails#welcome'
     end
 
     namespace :accounts do
