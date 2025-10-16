@@ -15,14 +15,17 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 TIME=`date +%s`
 
 api_host="http://localhost:3000"
-# api_host="http://mastodon.local:3000"
 # api_host="https://gumby.social"
+# api_host="https://surf.social"
+
 app_client_token=$SCRIPT_DIR/oauth-client-token.json
 user_token=$SCRIPT_DIR/oauth-user-token.json
 user=$SCRIPT_DIR/oauth-user.json
-user_email="test-$TIME@gumby.social"
+# user_email="test-$TIME@gumby.social"
+user_email="test-$TIME@surf.social"
 
 USER_PASSWORD="ZXCzxcASDasdQWEqwe"
+CHANGE_USER_PASSWORD="QWEqweASDasdZXCzxc"
 
 ## read app access token from file
 APP_ACCESS_TOKEN=`jq -r '.access_token' $app_client_token`
@@ -53,20 +56,32 @@ echo "Verify user credentials..."
 curl -s -X GET "$api_host/api/v1/accounts/verify_credentials" -H "Authorization: Bearer $USER_ACCESS_TOKEN" -L | jq . > $user
 cat $user | jq .
 
+USER_ACCOUNT_ID=`jq -r '.id' $user`
+
+## change user password
+echo "Change user password..."
+curl -s -X POST "$api_host/api/v1/surf/accounts/$USER_ACCOUNT_ID/change_password" \
+  -H 'Content-Type: application/json' \
+  -H "Authorization: Bearer $APP_ACCESS_TOKEN" \
+  -H "X-Surf-Registration-Token: $SURF_REGISTRATION_TOKEN" \
+  -d "{\"password\": \"$CHANGE_USER_PASSWORD\"}" -L | jq .
+
+## sign out user
 echo "Sign out user..."
 curl -s -X POST "$api_host/api/v1/surf/users/sign_out" \
   -H 'Content-Type: application/json' \
-  -H "Authorization: Bearer $USER_ACCESS_TOKEN" -L| jq .
+  -H "Authorization: Bearer $USER_ACCESS_TOKEN" -L | jq .
 
 echo "Verify account credentials..."
 curl -s -X GET "$api_host/api/v1/accounts/verify_credentials" -H "Authorization: Bearer $USER_ACCESS_TOKEN" -L | jq . > $user
 cat $user | jq .
 
+## sign in user with the new password
 echo "Sign in user..."
 curl -s -X POST "$api_host/api/v1/surf/users/sign_in" \
   -H 'Content-Type: application/json' \
   -H "Authorization: Bearer $APP_ACCESS_TOKEN" \
-  -d "{\"email\": \"$user_email\", \"password\": \"$USER_PASSWORD\"}" -L > $user_token
+  -d "{\"email\": \"$user_email\", \"password\": \"$CHANGE_USER_PASSWORD\"}" -L > $user_token
 cat $user_token | jq .
 
 ## read user access token from file
@@ -74,3 +89,14 @@ USER_ACCESS_TOKEN=`jq -r '.access_token' $user_token`
 echo "Verify account credentials..."
 curl -s -X GET "$api_host/api/v1/accounts/verify_credentials" -H "Authorization: Bearer $USER_ACCESS_TOKEN" -L | jq . > $user
 cat $user | jq .
+
+## delete the user account
+echo "Deleting user account $USER_ACCOUNT_ID..."
+curl -s -X DELETE "$api_host/api/v1/surf/accounts/$USER_ACCOUNT_ID" \
+  -H 'Content-Type: application/json' \
+  -H "Authorization: Bearer $APP_ACCESS_TOKEN" \
+  -H "X-Surf-Registration-Token: $SURF_REGISTRATION_TOKEN" \
+  -L | jq .
+
+echo "Verify deleted account credentials are invalid..."
+curl -s -X GET "$api_host/api/v1/accounts/verify_credentials" -H "Authorization: Bearer $USER_ACCESS_TOKEN" -L | jq .

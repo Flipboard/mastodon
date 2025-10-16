@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
 class Api::V1::Surf::AccountsController < Api::BaseController
-  before_action -> { doorkeeper_authorize! :write, :'write:accounts' }, only: [:create]
-  before_action :check_enabled_registrations, only: [:create]
-  skip_before_action :require_authenticated_user!, only: :create
+  before_action -> { doorkeeper_authorize! :write, :'write:accounts' }, only: [:create, :destroy, :change_password]
+  before_action :check_enabled_registrations, only: [:create, :destroy, :change_password]
+  skip_before_action :require_authenticated_user!, only: [:create, :destroy, :change_password]
 
+  # POST /api/v1/surf/accounts
   def create
     token = SurfAppSignUpService.new.call(doorkeeper_token.application, request.remote_ip, account_params)
     response = Doorkeeper::OAuth::TokenResponse.new(token)
@@ -16,12 +17,34 @@ class Api::V1::Surf::AccountsController < Api::BaseController
     render json: ValidationErrorFormatter.new(e, 'account.username': :username, 'invite_request.text': :reason).as_json, status: 422
   end
 
+  # DELETE /api/v1/surf/accounts/:id
+  def destroy
+    account = Account.find_by(id: params[:id])
+    logger.info "Deleting account: #{account.inspect}"
+    raise ActiveRecord::RecordNotFound unless account.present?
+    raise Mastodon::NotPermittedError unless account.local?
+    DeleteAccountService.new.call(account, reserve_email: false, reserve_username: false, skip_side_effects: false)
+    render json: { message: 'Account deleted' }, status: 200
+  end
+
+  # POST /api/v1/surf/accounts/:id/change_password
+  def change_password
+    account = Account.find_by(id: params[:id])
+    logger.info "Changing password for account: #{account.inspect}"
+    raise ActiveRecord::RecordNotFound unless account.present?
+    raise Mastodon::NotPermittedError unless account.local?
+    account.user.update!(password: params[:password], password_confirmation: params[:password])
+    render json: { message: 'Password changed' }, status: 200
+  end
+
   private
 
   def account_params
     params.permit(:username, :email, :password, :agreement, :locale, :reason, :time_zone)
   end
 
+  # Check if registrations are enabled
+  # This also enables the deletion and password change of an account
   def check_enabled_registrations
     # Skip this check for now...
     # forbidden if single_user_mode? || omniauth_only? || !allowed_registrations?
