@@ -9,6 +9,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  user_id    :bigint(8)        not null
+#  flipboard_username :string
 #
 
 class UserInviteRequest < ApplicationRecord
@@ -16,4 +17,5 @@ class UserInviteRequest < ApplicationRecord
 
   belongs_to :user, inverse_of: :invite_request
   validates :text, presence: true, length: { maximum: TEXT_SIZE_LIMIT }
+  validates :flipboard_username, allow_blank: true, length: { maximum: 128 }
 end

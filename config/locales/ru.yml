@@ -77,10 +77,12 @@ ru:
       enable_sign_in_token_auth: Включить аутентификацию с помощью одноразового пароля по эл. почте
       enabled: Включена
       enabled_msg: Отменено отключение учётной записи %{username}
+      flipboard_username: Flipboard Имя пользователя
       followers: Подписчики
       follows: Подписки
       header: Обложка профиля
       inbox_url: URL входящих
+      invite_request_flipboard_username: Flipboard Имя пользователя
       invite_request_text: Причины для присоединения
       invited_by: Приглашение выдал(а)
       ip: IP-адрес
