@@ -67,11 +67,12 @@
       = f.simple_fields_for :invite_request, resource.invite_request || resource.build_invite_request do |invite_request_fields|
         = invite_request_fields.input :text,
                                       as: :text,
-                                      hint: false,
+                                      hint: t('simple_form.hints.invite_request.text'),
                                       label: false,
                                       input_html: { maxlength: UserInviteRequest::TEXT_SIZE_LIMIT },
                                       required: Setting.require_invite_text,
                                       wrapper: :with_block_label
+        = invite_request_fields.input :flipboard_username, as: :text, hint: t('simple_form.hints.invite_request_flipboard_username.text'), wrapper: :with_block_label, required: Setting.require_invite_text
 
   = hidden_field_tag :accept, params[:accept]
   = f.input :invite_code, as: :hidden
