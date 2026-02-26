@@ -72,9 +72,11 @@ zh-CN:
       enabled: 已启用
       enabled_msg: 成功解冻 %{username} 的账号
       followers: 关注者
+      flipboard_username: Flipboard 用户名
       follows: 关注
       header: 封面图
       inbox_url: 收件箱（Inbox）URL
+      invite_request_flipboard_username: Flipboard 用户名
       invite_request_text: 加入理由
       invited_by: 邀请者为
       ip: IP 地址

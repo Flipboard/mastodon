@@ -55,10 +55,12 @@ kab:
       email_status: Addad n imayl
       enable: Rmed
       enabled: Yermed
+      flipboard_username: Flipboard isem n useqdac
       followers: Imeḍfaṛen
       follows: Yeṭafaṛ
       header: Ixef
       inbox_url: URL n yinekcam
+      invite_request_flipboard_username: Flipboard isem n useqdac
       invite_request_text: Timental n tmerna
       invited_by: Inced-it-id
       ip: Tansa IP

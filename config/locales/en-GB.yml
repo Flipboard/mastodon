@@ -73,10 +73,12 @@ en-GB:
       enable_sign_in_token_auth: Enable email token authentication
       enabled: Enabled
       enabled_msg: Successfully unfroze %{username}'s account
+      flipboard_username: Flipboard username
       followers: Followers
       follows: Follows
       header: Header
       inbox_url: Inbox URL
+      invite_request_flipboard_username: Flipboard username
       invite_request_text: Reasons for joining
       invited_by: Invited by
       ip: IP
@@ -2116,7 +2118,7 @@ en-GB:
       edit_profile_action: Personalise
       edit_profile_step: Boost your interactions by having a comprehensive profile.
       edit_profile_title: Personalise your profile
-      explanation: Here are some tips to get you started
+      explanation: You’ve been approved to join flipboard.social. Here are some tips to get you started
       feature_action: Learn more
       feature_audience: Mastodon provides you with a unique possibility of managing your audience without middlemen. Mastodon deployed on your own infrastructure allows you to follow and be followed from any other Mastodon server online and is under no one's control but yours.
       feature_audience_title: Build your audience in confidence
@@ -2145,7 +2147,7 @@ en-GB:
       share_title: Share your Mastodon profile
       sign_in_action: Sign in
       subject: Welcome to Mastodon
-      title: Welcome aboard, %{name}!
+      title: Welcome %{name}!
   users:
     follow_limit_reached: You cannot follow more than %{limit} people
     go_to_sso_account_settings: Go to your identity provider's account settings
