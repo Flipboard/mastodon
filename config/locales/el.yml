@@ -73,10 +73,12 @@ el:
       enable_sign_in_token_auth: Ενεργοποίηση ελέγχου ταυτότητας διακριτικού e-mail
       enabled: Ενεργοποιημένο
       enabled_msg: Επιτυχές ξεπάγωμα λογαριασμού του/της %{username}
+      flipboard_username: Flipboard Όνομα χρήστη
       followers: Ακόλουθοι
       follows: Ακολουθεί
       header: Κεφαλίδα
       inbox_url: URL εισερχομένων
+      invite_request_flipboard_username: Flipboard Όνομα χρήστη
       invite_request_text: Λόγοι για συμμετοχή
       invited_by: Προσκλήθηκε από
       ip: IP

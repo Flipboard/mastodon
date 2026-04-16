@@ -74,9 +74,11 @@ it:
       enabled: Abilitato
       enabled_msg: Il profilo di %{username} è stato scongelato correttamente
       followers: Follower
+      flipboard_username: Flipboard nome utente
       follows: Seguiti
       header: Intestazione
       inbox_url: URL casella
+      invite_request_flipboard_username: Flipboard nome utente
       invite_request_text: Motivi d'iscrizione
       invited_by: Invitato da
       ip: IP
