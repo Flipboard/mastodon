@@ -146,6 +146,8 @@ if [[ "${surf_registrations_enabled}" == "true" ]] ; then
 else
   echo "SURF_REGISTRATIONS_ENABLED=false" >> /tmp/env.production
 fi
+echo "EXPERIMENTAL_FEATURES=fasp,inbound_quotes" >> /tmp/env.production
+echo "GITHUB_REPOSITORY=Flipboard/mastodon" >> /tmp/env.production
 
 # MASTODON_USE_LIBVIPS=true
 
