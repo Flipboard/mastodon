@@ -1146,7 +1146,6 @@
   WashingtonExam
   AmerIndependent
   Artwort
-  stalman
   InsideEdition
   SPORTes2019
   CurveBreak
