@@ -124,6 +124,9 @@ echo "DISABLE_AUTOMATIC_SWITCHING_TO_APPROVED_REGISTRATIONS=true" >> /tmp/env.pr
 echo "TRUSTED_PROXY_IP=172.30.0.0/16,127.0.0.1/32" >> /tmp/env.production
 echo "S3_RETRY_LIMIT=2" >> /tmp/env.production
 if [[ "${mypool}" == "production" ]] ; then
+  echo "MAX_HASHTAGS=3" >> /tmp/env.production
+fi
+if [[ "${mypool}" == "production" ]] ; then
   echo "ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY=7LdpxxRk6U0aa1vGI7LvGRomD6KvVxfB" >> /tmp/env.production
   echo "ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT=BB63msnlzgbbYk2pVDOXOhuAjvf0L1Lw" >> /tmp/env.production
   echo "ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY=HebPlwfpL5KJjZIlwpWr6xptL5eXfhrR" >> /tmp/env.production
