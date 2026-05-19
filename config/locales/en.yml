@@ -1925,6 +1925,7 @@ en:
       hide: Hide post
       show: Show more
     default_language: Same as interface language
+    too_many_hashtags: exceeds the maximum of %{max} hashtags
     disallowed_hashtags:
       one: 'contained a disallowed hashtag: %{tags}'
       other: 'contained the disallowed hashtags: %{tags}'

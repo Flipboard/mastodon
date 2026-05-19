@@ -105,6 +105,7 @@ class Status < ApplicationRecord
   validates :text, presence: true, unless: -> { with_media? || reblog? || with_quote? }
   validates_with StatusLengthValidator
   validates_with DisallowedHashtagsValidator
+  validates_with StatusHashtagsValidator
   validates :reblog, uniqueness: { scope: :account }, if: :reblog?
 
   accepts_nested_attributes_for :poll
