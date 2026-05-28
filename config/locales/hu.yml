@@ -73,10 +73,12 @@ hu:
       enable_sign_in_token_auth: Tokenes e-mail-hitelesítés engedélyezése
       enabled: Bekapcsolva
       enabled_msg: "%{username} fiókja befagyasztása sikeresen visszavonva"
+      flipboard_username: Flipboard felhasználónév
       followers: Követő
       follows: Követett
       header: Fejléc
       inbox_url: Beérkezett üzenetek webcíme
+      invite_request_flipboard_username: Flipboard felhasználónév
       invite_request_text: Csatlakozás oka
       invited_by: Meghívta
       ip: IP-cím
