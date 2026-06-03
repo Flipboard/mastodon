@@ -73,10 +73,12 @@ fi:
       enable_sign_in_token_auth: Ota sähköpostitunnuksella todennus käyttöön
       enabled: Käytössä
       enabled_msg: Käyttäjän %{username} tilin jäädytys kumottiin onnistuneesti
+      flipboard_username: Flipboard käyttäjätunnus
       followers: Seuraajat
       follows: Seurattavat
       header: Otsakekuva
       inbox_url: Postilaatikon URL-⁠osoite
+      invite_request_flipboard_username: Flipboard käyttäjätunnus
       invite_request_text: Syitä liittymiseen
       invited_by: Kutsuja
       ip: IP-osoite
