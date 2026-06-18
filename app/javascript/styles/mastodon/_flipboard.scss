@@ -1,0 +1,35 @@
+// Flipboard brand theme override, layered on top of Mastodon 4.6's design-token
+// system (styles/mastodon/theme/*). 4.6 routes every brand/accent color through
+// the indigo palette ramp (--color-indigo-50..950 → --color-text-brand,
+// --color-bg-brand-base, --color-border-brand, etc.). By replacing that ramp with
+// Flipboard red here, all brand UI renders red automatically in light, dark, and
+// high-contrast modes — no per-component overrides, no forked theme files.
+
+// Keep this file as the ENTIRE Flipboard theming delta so version bumps stay cheap:
+// `@use 'mastodon/flipboard'` is added once in application.scss, after the theme.
+
+html {
+  // Brand ramp: Flipboard red replaces Mastodon indigo.
+  // Stops mirror the indigo lightness curve so 4.6's per-stop token choices
+  // (e.g. text-brand = 300 on dark / 700 on light) keep good contrast.
+  --color-indigo-50: #fff1f1;
+  --color-indigo-100: #ffe0e0;
+  --color-indigo-200: #ffc7c7;
+  --color-indigo-300: #f55858; // dark-mode --color-text-brand
+  --color-indigo-400: #f54848;
+  --color-indigo-500: #f53838; // Flipboard brand red
+  --color-indigo-600: #f52828;
+  --color-indigo-700: #db2020; // light-mode --color-text-brand + --color-bg-brand-base
+  --color-indigo-800: #aa1a1a;
+  --color-indigo-900: #841717;
+  --color-indigo-950: #490a0a;
+
+  // Flipboard aqua link-underline accent
+  --flipboard-underline: #0bf9ea;
+}
+
+// Aqua underline accent on links (text-decoration-color is inert unless the link
+// is actually underlined, so this is safe to apply broadly).
+a {
+  text-decoration-color: var(--flipboard-underline);
+}
