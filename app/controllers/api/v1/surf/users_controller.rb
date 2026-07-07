@@ -34,7 +34,7 @@ class Api::V1::Surf::UsersController < Api::BaseController
     # prepare response
     response = Doorkeeper::OAuth::TokenResponse.new(token)
     headers.merge!(response.headers)
-    self.response_body = Oj.dump(response.body)
+    self.response_body = response.body.to_json
     self.status        = response.status
   end
 

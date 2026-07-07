@@ -11,7 +11,7 @@ class Api::V1::Surf::AccountsController < Api::BaseController
     response = Doorkeeper::OAuth::TokenResponse.new(token)
 
     headers.merge!(response.headers)
-    self.response_body = Oj.dump(response.body)
+    self.response_body = response.body.to_json
     self.status        = response.status
   rescue ActiveRecord::RecordInvalid => e
     render json: ValidationErrorFormatter.new(e, 'account.username': :username, 'invite_request.text': :reason).as_json, status: 422
