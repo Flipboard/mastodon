@@ -99,7 +99,7 @@ gem 'webpush', github: 'mastodon/webpush', ref: '9631ac63045cfabddacc69fc06e919b
 gem 'json'
 gem 'json-canonicalization', '~> 1.0'
 gem 'json-ld'
-gem 'json-ld-preloaded', '~> 3.2'
+gem 'json-ld-preloaded', '~> 3.3'
 gem 'rdf-normalize', '~> 0.5'
 
 gem 'prometheus_exporter', '~> 2.2', require: false
