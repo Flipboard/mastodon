@@ -160,9 +160,14 @@ sudo mv "/tmp/env.production" "${TARGET_DIR}/live/.env.production"
 sudo chown -R mastodon:mastodon /home/mastodon
 
 # build the code
-sudo -i -u mastodon bash --login -c 'cd live; export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH; export RAILS_ENV=production; bundle config deployment "true"; bundle config without "development test"; bundle install; yarn install --immutable'
+# NOTE: `set -eo pipefail` INSIDE the inline shell is required — without it a chained
+# `bundle install; yarn install` returns only yarn's exit code, so a failed bundle
+# install (e.g. missing rbenv Ruby) is silently masked and the deploy reports success.
+sudo -i -u mastodon bash --login -c 'set -eo pipefail; cd live; export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH; export RAILS_ENV=production; bundle config deployment "true"; bundle config without "development test"; bundle install; yarn install --immutable' \
+  || { echo "FATAL: bundle/yarn install failed on $(hostname) — deploy NOT successful"; exit 1; }
 
 # generate assets
-sudo -i -u mastodon bash --login -c 'cd live; export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH; RAILS_ENV=production bundle exec rails assets:precompile'
+sudo -i -u mastodon bash --login -c 'set -eo pipefail; cd live; export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH; RAILS_ENV=production bundle exec rails assets:precompile' \
+  || { echo "FATAL: assets:precompile failed on $(hostname) — deploy NOT successful"; exit 1; }
 
 exit 0
