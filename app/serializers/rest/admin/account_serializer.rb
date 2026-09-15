@@ -4,7 +4,7 @@ class REST::Admin::AccountSerializer < ActiveModel::Serializer
   attributes :id, :username, :domain, :created_at,
              :email, :ip, :confirmed, :suspended,
              :silenced, :sensitized, :disabled, :approved, :locale,
-             :invite_request
+             :invite_request, :flipboard_username
 
   attribute :created_by_application_id, if: :created_by_application?
   attribute :invited_by_account_id, if: :invited?
@@ -63,6 +63,10 @@ class REST::Admin::AccountSerializer < ActiveModel::Serializer
 
   def invite_request
     object.user&.invite_request&.text
+  end
+
+  def flipboard_username
+    object.user&.invite_request&.flipboard_username
   end
 
   def invited_by_account_id

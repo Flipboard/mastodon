@@ -8,7 +8,7 @@ class AccountSearchService < BaseService
   MENTION_ONLY_RE = /\A#{Account::MENTION_RE}\z/i
 
   # Min. number of characters to look for non-exact matches
-  MIN_QUERY_LENGTH = 3
+  MIN_QUERY_LENGTH = 2
 
   ES_QUERY_TIMEOUT = ENV.fetch('ES_QUERY_TIMEOUT', '10s')
 
