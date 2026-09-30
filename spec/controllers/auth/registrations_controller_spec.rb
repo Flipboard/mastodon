@@ -215,6 +215,21 @@ RSpec.describe Auth::RegistrationsController do
       end
     end
 
+    context 'when captcha is enabled and not solved' do
+      subject do
+        Setting.registrations_mode = 'open'
+        allow(controller).to receive(:captcha_enabled?).and_return(true)
+        allow(controller).to receive(:verify_hcaptcha).and_return(false)
+        post :create, params: { user: { account_attributes: { username: 'bpdeadbeef0badc0de' }, email: 'bot@example.com', password: '12345678', password_confirmation: '12345678', agreement: 'true' } }
+      end
+
+      it 'does not create a user and redirects back to the form' do
+        subject
+        expect(User.find_by(email: 'bot@example.com')).to be_nil
+        expect(response).to redirect_to new_user_registration_path
+      end
+    end
+
     context 'when user has an email address requiring approval' do
       subject do
         request.headers['Accept-Language'] = accept_language
