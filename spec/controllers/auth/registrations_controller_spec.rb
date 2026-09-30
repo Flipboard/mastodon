@@ -218,8 +218,7 @@ RSpec.describe Auth::RegistrationsController do
     context 'when captcha is enabled and not solved' do
       subject do
         Setting.registrations_mode = 'open'
-        allow(controller).to receive(:captcha_enabled?).and_return(true)
-        allow(controller).to receive(:verify_hcaptcha).and_return(false)
+        allow(controller).to receive_messages(captcha_enabled?: true, verify_hcaptcha: false)
         post :create, params: { user: { account_attributes: { username: 'bpdeadbeef0badc0de' }, email: 'bot@example.com', password: '12345678', password_confirmation: '12345678', agreement: 'true' } }
       end
 
