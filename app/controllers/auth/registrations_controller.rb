@@ -9,7 +9,7 @@ class Auth::RegistrationsController < Devise::RegistrationsController
 
   before_action :set_invite, only: [:new, :create]
   before_action :check_enabled_registrations, only: [:new, :create]
-  before_action :extend_csp_for_captcha!, only: [:new]
+  before_action :extend_csp_for_captcha!, only: [:new, :create]
   before_action :configure_sign_up_params, only: [:create]
   before_action :set_sessions, only: [:edit, :update]
   before_action :set_strikes, only: [:edit, :update]
@@ -32,7 +32,7 @@ class Auth::RegistrationsController < Devise::RegistrationsController
   def create
     check_captcha! do |message|
       flash[:alert] = message
-      return redirect_to new_user_registration_path(accept: params[:accept])
+      return redirect_to new_user_registration_path(accept: params[:accept], invite_code: invite_code)
     end
 
     super
