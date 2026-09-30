@@ -82,5 +82,7 @@
               required: false,
               wrapper: :with_label
 
+  = render_captcha
+
   .actions
     = f.button :button, @invite.present? ? t('auth.register') : sign_up_message, type: :submit
