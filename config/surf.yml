@@ -1,0 +1,12 @@
+defaults: &defaults
+  registrations_enabled: <%= ENV.fetch('SURF_REGISTRATIONS_ENABLED', 'false') == 'true' %>
+  registration_token: <%= ENV.fetch('SURF_REGISTRATION_TOKEN', '') %>
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
