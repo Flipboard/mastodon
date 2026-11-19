@@ -98,4 +98,24 @@ RSpec.describe 'UnsubscriptionsController' do
       expect(user.settings['notification_emails.follow']).to be false
     end
   end
+
+  describe 'unsubscribing from the admin moderation mails' do
+    %w(report appeal pending_account trends).each do |admin_type|
+      context "with type #{admin_type}" do
+        let(:type) { admin_type }
+
+        before do
+          user.settings.update("notification_emails.#{admin_type}": true)
+          user.save!
+
+          post unsubscribe_url(token: token, type: type), params: { 'List-Unsubscribe' => 'One-Click' }
+        end
+
+        it 'switches the setting off' do
+          expect(response).to have_http_status(200)
+          expect(user.reload.settings["notification_emails.#{admin_type}"]).to be false
+        end
+      end
+    end
+  end
 end
