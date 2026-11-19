@@ -2265,11 +2265,15 @@ en:
       user:
         confirmation_html: You'll no longer receive %{type} from Mastodon on %{domain}.
     notification_emails:
+      appeal: moderation appeal emails
       favourite: favorite notification emails
       follow: follow notification emails
       follow_request: follow request emails
       mention: mention notification emails
+      pending_account: pending account emails
       reblog: boost notification emails
+      report: new report emails
+      trends: trends review emails
     show:
       action: Unsubscribe
       email_subscription:
