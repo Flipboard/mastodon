@@ -98,4 +98,39 @@ RSpec.describe 'UnsubscriptionsController' do
       expect(user.settings['notification_emails.follow']).to be false
     end
   end
+
+  describe 'unsubscribing from the admin moderation mails' do
+    around do |example|
+      old = ActionController::Base.allow_forgery_protection
+      ActionController::Base.allow_forgery_protection = true
+
+      example.run
+
+      ActionController::Base.allow_forgery_protection = old
+    end
+
+    %w(report appeal pending_account trends).each do |admin_type|
+      context "with type #{admin_type}" do
+        let(:type) { admin_type }
+
+        before do
+          user.settings.update("notification_emails.#{admin_type}": true)
+          user.save!
+
+          post unsubscribe_url(token: token, type: type), params: { 'List-Unsubscribe' => 'One-Click' }
+        end
+
+        it 'switches the setting off' do
+          expect(response).to have_http_status(200)
+          expect(user.reload.settings["notification_emails.#{admin_type}"]).to be false
+        end
+
+        it 'names the mail being switched off' do
+          expect(response.body)
+            .to include(I18n.t(admin_type, scope: 'unsubscriptions.notification_emails'))
+            .and not_include('translation missing')
+        end
+      end
+    end
+  end
 end

@@ -43,6 +43,11 @@ class UnsubscriptionsController < ApplicationController
 
   def set_type
     @type = email_type_from_param
+    # The views label the mail being switched off. @type is the settings key
+    # (notification_emails.foo) and the label scope already ends in
+    # notification_emails, so rendering @type looks up
+    # unsubscriptions.notification_emails.notification_emails.foo and misses.
+    @type_name = params[:type] if @type.present?
   end
 
   def require_type_if_user!
@@ -51,7 +56,8 @@ class UnsubscriptionsController < ApplicationController
 
   def email_type_from_param
     case params[:type]
-    when 'follow', 'reblog', 'favourite', 'mention', 'follow_request'
+    when 'follow', 'reblog', 'favourite', 'mention', 'follow_request',
+         'report', 'appeal', 'pending_account', 'trends'
       "notification_emails.#{params[:type]}"
     end
   end
