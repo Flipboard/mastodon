@@ -25,6 +25,12 @@ RSpec.describe AdminMailer do
         .and match('John has reported Mike')
         .and match("View: #{admin_report_url(report)}")
     end
+
+    it 'offers one-click unsubscribe for the report setting' do
+      expect(mail['List-Unsubscribe-Post'].to_s).to eq('List-Unsubscribe=One-Click')
+      expect(mail['List-Unsubscribe'].to_s).to include('/unsubscribe')
+      expect(mail['List-Unsubscribe'].to_s).to include('type=report')
+    end
   end
 
   describe '.new_appeal' do
